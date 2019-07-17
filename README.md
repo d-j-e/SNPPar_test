@@ -1,5 +1,5 @@
 # SNPPar_test
- Data and scripts for testing SNPPar with simulated sequence data
+ Data and scripts for testing [SNPPar](https://github.com/d-j-e/SNPPar) with simulated sequence data
 
 
 1. Explanation of test data
