@@ -49,8 +49,8 @@ The randomly generated lists used for testing are provided (as I forgot a 'seed'
 
 # 3. Obtaining initial SNP tables
 
-Note: 'step3/NC_000962_3_NC_000962_alleles_var.csv.zip' needs to be unzipped before the next step 
-Warning: The SNP table 'NC_000962_3_NC_000962_alleles_var.csv' is a 3 Gb file after decompression
+Note: 'step3/NC_000962_alleles_3786strains_var.csv.zip' needs to be unzipped before the next step 
+Warning: The SNP table 'NC_000962_alleles_3786strains_var.csv' is a 900 MB file after decompression
 
 Note: 'parseSNPtable.py' uses python 2 and not 3. It also requires ete2 and biopython
 
@@ -58,12 +58,12 @@ The three modules used in this run are 'filter', which uses 'TB_excluded_regions
 
 ### Command:
 
-python parseSNPtable.py -s NC_000962_3_NC_000962_alleles_var.csv -x step3/TB_excluded_regions_with_repeat.txt -r step/3NC_00962_3_1.gbk -m filter,cons,aln -l step2/HCMC_L2_r10p.txt -p HCMC_L2_r10p_ -c 0.95
+python parseSNPtable.py -s NC_000962_alleles_3786strains_var.csv -x step3/TB_excluded_regions_with_repeat.txt -r step/3NC_00962_3_1.gbk -m filter,cons,aln -l step2/HCMC_L2_r10p.txt -p HCMC_L2_r10p_ -c 0.95
 
 Conservation Note:
 
 					r10p, r20p, r100 	-c 0.95
-					r50p, r500			-c 0.99
+					r50p, r500		-c 0.99
 					all, r1000, r2000	-c 0.995
 
 Outputs (of importance to us)
