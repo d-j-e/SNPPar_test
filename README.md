@@ -6,7 +6,7 @@
 
 ## 1.1 3 levels of data 
 
-* Viet Nam (Ho Chi Minh City) lineage 2 - 'HCMC_L2'
+* Vietnam (Ho Chi Minh City) lineage 2 - 'HCMC_L2'
 * Global lineage 2 - 'Global_L2'
 * Global lineages 1, 2 and 4 - 'Global_L124'
 
