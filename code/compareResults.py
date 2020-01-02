@@ -25,7 +25,7 @@ from operator import itemgetter
 from argparse import ArgumentParser
 
 def parseArguments():
-	parser = ArgumentParser(description='\nExtracts mutation events (ME) from simulated data. Outputs include full list of ME and list of homoplasic ME')
+	parser = ArgumentParser(description='\nCompares expected and observed parallel mutation events')
 	parser.add_argument('-e', '--expected', type=str, required=True, help='Expected parallel mutation events - from simulation (required)')
 	parser.add_argument('-o', '--observed', type=str, required=True, help='Observed parallel mutation events - from "parallel" (required)')
 	parser.add_argument('-t', '--total_SNP_count', type=int, required=True, help='Total number of SNPs tested (required)')
@@ -67,13 +67,13 @@ def getComparison(test_set_expected,test_set_observed,total_SNP_count,group,run)
 		else:
 			False_Negative += 1
 			if False_Negative == 1:
-				print('False_Negative')
+				print('False Negative:')
 			print(item)
 	for item in test_set_observed:
 		if item not in test_set_expected:
 			False_Positive += 1
-			if False_Positive == 1:
-				print('False_Positive')
+			if False_Positive >= 1:
+				print('False Positive:')
 			print(item)
 	True_Negative = total_SNP_count - (True_Positive + False_Positive + False_Negative)
 	Accuracy = (True_Positive+True_Negative)/total_SNP_count
