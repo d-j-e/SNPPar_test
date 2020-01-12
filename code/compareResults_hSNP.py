@@ -156,26 +156,39 @@ def getHomoplasyType(SNP_test_set,ME_type,expected,tree):
 					types += 'C'
 			elif (SNP_test_set[i].split('\t')[3+shift] == SNP_test_set[j].split('\t')[4+shift] 
 				and SNP_test_set[i].split('\t')[4+shift] == SNP_test_set[j].split('\t')[3+shift]):
-				test_nodes = []
-				node = tree.search_nodes(name=SNP_test_set[i].split('\t')[1+shift])[0]
-				for item in node.get_descendants():
-					test_nodes.append(item.name)
-				for name in test_nodes:
-					if name == SNP_test_set[j].split('\t')[2+shift]:
-						if expected:
-							types += 'R'
-						elif SNP_test_set[i].split('\t')[6] == SNP_test_set[j].split('\t')[6]:
-							types += 'R'
-				test_nodes = []
-				node = tree.search_nodes(name=SNP_test_set[j].split('\t')[1+shift])[0]
-				for item in node.get_descendants():
-					test_nodes.append(item.name)
-				for name in test_nodes:
-					if name == SNP_test_set[i].split('\t')[2+shift]:
-						if expected:
-							types += 'R'
-						elif SNP_test_set[i].split('\t')[6] == SNP_test_set[j].split('\t')[6]:
-							types += 'R'
+				if SNP_test_set[i].split('\t')[1+shift]== 'N1':
+					if expected:
+						types += 'R'
+					elif SNP_test_set[i].split('\t')[6] == SNP_test_set[j].split('\t')[6]:
+						types += 'R'
+				else:
+
+					test_nodes = []
+					node = tree.search_nodes(name=SNP_test_set[i].split('\t')[1+shift])[0]
+					for item in node.get_descendants():
+						test_nodes.append(item.name)
+					for name in test_nodes:
+						if name == SNP_test_set[j].split('\t')[2+shift]:
+							if expected:
+								types += 'R'
+							elif SNP_test_set[i].split('\t')[6] == SNP_test_set[j].split('\t')[6]:
+								types += 'R'
+				if SNP_test_set[j].split('\t')[1+shift]== 'N1':
+					if expected:
+						types += 'R'
+					elif SNP_test_set[i].split('\t')[6] == SNP_test_set[j].split('\t')[6]:
+						types += 'R'
+				else:
+					test_nodes = []
+					node = tree.search_nodes(name=SNP_test_set[j].split('\t')[1+shift])[0]
+					for item in node.get_descendants():
+						test_nodes.append(item.name)
+					for name in test_nodes:
+						if name == SNP_test_set[i].split('\t')[2+shift]:
+							if expected:
+								types += 'R'
+							elif SNP_test_set[i].split('\t')[6] == SNP_test_set[j].split('\t')[6]:
+								types += 'R'
 	ME_type.append([SNP_test_set[i].split('\t')[0],root,types])
 	return ME_type
 
