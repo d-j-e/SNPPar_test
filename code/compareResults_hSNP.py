@@ -18,7 +18,7 @@ python compareResults.py -e <expected>
 						 -m <memory use>
 '''
 #
-# Last modified - 9/01/2020
+# Last modified - 13/01/2020
 #
 
 import os
@@ -131,7 +131,7 @@ def getHomoplasyType(SNP_test_set,ME_type,expected,tree):
 	if expected:
 		shift = 0
 		for i in range(len(SNP_test_set)):
-			SNP_test_set[i] = SNP_test_set[i].rstrip()
+			SNP_test_set[i] = SNP_test_set[i].rstrip('\n')
 	else:
 		shift = 1
 	types = ''
@@ -156,39 +156,19 @@ def getHomoplasyType(SNP_test_set,ME_type,expected,tree):
 					types += 'C'
 			elif (SNP_test_set[i].split('\t')[3+shift] == SNP_test_set[j].split('\t')[4+shift] 
 				and SNP_test_set[i].split('\t')[4+shift] == SNP_test_set[j].split('\t')[3+shift]):
-				if SNP_test_set[i].split('\t')[1+shift]== 'N1':
+				if SNP_test_set[i].split('\t')[1+shift]== 'N1' or SNP_test_set[j].split('\t')[1+shift]== 'N1':
 					if expected:
 						types += 'R'
 					elif SNP_test_set[i].split('\t')[6] == SNP_test_set[j].split('\t')[6]:
 						types += 'R'
 				else:
-
-					test_nodes = []
-					node = tree.search_nodes(name=SNP_test_set[i].split('\t')[1+shift])[0]
-					for item in node.get_descendants():
-						test_nodes.append(item.name)
-					for name in test_nodes:
-						if name == SNP_test_set[j].split('\t')[2+shift]:
-							if expected:
-								types += 'R'
-							elif SNP_test_set[i].split('\t')[6] == SNP_test_set[j].split('\t')[6]:
-								types += 'R'
-				if SNP_test_set[j].split('\t')[1+shift]== 'N1':
-					if expected:
-						types += 'R'
-					elif SNP_test_set[i].split('\t')[6] == SNP_test_set[j].split('\t')[6]:
-						types += 'R'
-				else:
-					test_nodes = []
-					node = tree.search_nodes(name=SNP_test_set[j].split('\t')[1+shift])[0]
-					for item in node.get_descendants():
-						test_nodes.append(item.name)
-					for name in test_nodes:
-						if name == SNP_test_set[i].split('\t')[2+shift]:
-							if expected:
-								types += 'R'
-							elif SNP_test_set[i].split('\t')[6] == SNP_test_set[j].split('\t')[6]:
-								types += 'R'
+					node1 = tree.search_nodes(name=SNP_test_set[i].split('\t')[1+shift])[0]
+					node2 = tree.search_nodes(name=SNP_test_set[j].split('\t')[1+shift])[0]
+					if node1.get_common_ancestor(node2) == node1 or node2.get_common_ancestor(node1) == node2:
+						if expected:
+							types += 'R'
+						elif SNP_test_set[i].split('\t')[6] == SNP_test_set[j].split('\t')[6]:
+							types += 'R'
 	ME_type.append([SNP_test_set[i].split('\t')[0],root,types])
 	return ME_type
 
@@ -253,6 +233,8 @@ def compareHomoplasyType(expected_type,observed_type,output_file_name):
 						single_call_incorrect_CR += 1
 		else:
 			print('SNP >2 ME: ' + expected_type[i][0])
+			print(expected_type[i])
+			print(observed_type[i])
 	result = [correct_calls,incorrect_calls,parallel_events,convergent_events,revertant_events,root_node_correct,root_node_incorrect]
 	result += [single_calls,single_call_correct_P,single_call_correct_C,single_call_correct_R,single_call_incorrect_PC,single_call_incorrect_PR]
 	result += [single_call_incorrect_CP,single_call_incorrect_CR,single_call_incorrect_RP,single_call_incorrect_RC]
