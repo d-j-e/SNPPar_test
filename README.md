@@ -16,19 +16,19 @@ HCMC_L2 and Global_L2 (n=821 and n=940 respectively)
 
 Random samples of 10, 20 and 50 percent of isolates, plus all isolates
 
-	Size	Labels	HCMC_L2 	Global_L2
-	10% 	'_r10p'	82    		94 
-	20% 	'_r20p'	164   		188 
-	50% 	'_r50p'	410		   	470 
-	100%	'_all'	821   		940
+	Size	Labels	HCMC_L2	Global_L2
+	10%	'_r10p'	82	94
+	20%	'_r20p'	164	188 
+	50%	'_r50p'	410	470 
+	100%	'_all'	821	940
 
 Global_L124 (n=2965)
 Random samples of (n=)100, 500, 1000 and 2000 isolates
 
-		'_r100' 
-		'_r500'
-		'_r1000' 
-		'_r2000'
+		100	'_r100'
+		500	'_r500'
+		1000	'_r1000'
+		2000	'_r2000'
 
 
 Examples of each step using 'HCMC_L2_r10p' are given below. The relevant data will be found in the first folder for the step each is introduced.
@@ -39,7 +39,7 @@ Generated from one of three different lists;
 
 'step2/HCMC_L2.txt', 'step2/Global_L2.txt', and 'step2/Global_L124.txt'.
 
-Note: Most of the python scripts provided use python 3, often along with the packages biopython and ete3 (same as SNPPar), unless otherwise noted.
+Note: All of the python scripts provided use python 3, often along with the packages biopython and ete3 (same as SNPPar).
 
 ### Command:
 
@@ -52,8 +52,6 @@ The randomly generated lists used for testing are provided (as I forgot a 'seed'
 Note: 'step3/NC_000962_alleles_3786strains_var.csv.zip' needs to be unzipped before the next step 
 Warning: The SNP table 'NC_000962_alleles_3786strains_var.csv' is a 900 MB file after decompression
 
-Note: 'parseSNPtable.py' uses python 2 and not 3. It also requires ete2 and biopython
-
 The three modules used in this run are 'filter', which uses 'TB_excluded_regions_with_repeat.txt' to remove SNPs that occur in previously identified repeat regions, 'cons'(erve), which removes those SNPs with more than (1-cons)\*100\*isolates missing calls, and 'aln' (alignment), which outputs the SNP table in MFASTA format for Tree generation using RAxML.
 
 ### Command:
@@ -62,9 +60,9 @@ python parseSNPtable.py -s NC_000962_alleles_3786strains_var.csv -x step3/TB_exc
 
 Conservation Note:
 
-					r10p, r20p, r100 	-c 0.95
-					r50p, r500		-c 0.99
-					all, r1000, r2000	-c 0.995
+		r10p, r20p, r100	-c 0.95
+		r50p, r500	-c 0.99
+		all, r1000, r2000	-c 0.995
 
 Outputs (of importance to us)
 
@@ -77,10 +75,10 @@ Resulting SNP tables for all twelve data sets are in 'step3/SNP_tables.zip'. Res
 
 Note: RAxML was run on a computational cluster (Massive LINK) to make use of the multiple-threaded version. Each of up to 16 threads were allocated 4 Gb. Each data set was run five times using different seed values for each run - these seeds were 'recycled' for each data set.
 
-		Seeds 	Run
-		 		1	2	3	4	5
-		'-p'	8876251475 	1885216875 	8282263475 	1118374265 	8144432745
-		'-x'	31566 	315646 	3444666 	15623245 	553324366
+		Seeds	Run
+		 	1	2	3	4	5
+		'-p'	8876251475	1885216875	8282263475	1118374265	8144432745
+		'-x'	31566	315646	3444666	15623245	553324366
 
 ## Version used: 8.2.12
 
