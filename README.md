@@ -77,9 +77,9 @@ Resulting SNP tables for all twelve data sets are in 'step3/SNP_tables.zip'. Res
 Note: RAxML was run on a computational cluster (Massive LINK) to make use of the multiple-threaded version. Each of up to 16 threads were allocated 4 Gb. Each data set was run five times using different seed values for each run - these seeds were 'recycled' for each data set.
 
 		Seeds	Run
-		 	1		2		3	4	5
+		 	1		2		3		4		5
 		'-p'	8876251475	1885216875	8282263475	1118374265	8144432745
-		'-x'	31566		315646		3444666	15623245	553324366
+		'-x'	31566		315646		3444666		15623245	553324366
 
 ## Version used: 8.2.12
 
