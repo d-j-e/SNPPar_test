@@ -106,9 +106,9 @@ In each case, the tree used was the 'RAxML_bipartitions' version. The 'best' RAx
 
 # 11. Real Datasets
 
-## 11.1 _Elizabethkingia_
+## 11.1 _Elizabethkingia anophelis_
 
-## 11.2 _Burkholderia_
+## 11.2 _Burkholderia dolosa_
 
 ## 11.3 _Mycobacterium tuberculosis_
 
