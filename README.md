@@ -1,6 +1,5 @@
 # SNPPar_test
- Data and scripts for testing [SNPPar](https://github.com/d-j-e/SNPPar) with simulated sequence data
-
+ Data and scripts for testing [SNPPar](https://github.com/d-j-e/SNPPar) with either simulated or empirical datasets
 
 # 1. Explanation of test data
 
@@ -61,9 +60,9 @@ python parseSNPtable.py -s NC_000962_alleles_3786strains_var.csv -x step3/TB_exc
 
 Conservation Note:
 
-	dataset	conservation level
+	dataset		conservation level
 	r10p, r20p, r100	-c 0.95
-	r50p, r500	-c 0.99
+	r50p, r500		-c 0.99
 	all, r1000, r2000	-c 0.995
 
 Outputs (of importance to us)
