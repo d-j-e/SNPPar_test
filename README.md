@@ -81,7 +81,7 @@ Note: RAxML was run on a computational cluster (Massive LINK) to make use of the
 		'-p'	8876251475	1885216875	8282263475	1118374265	8144432745
 		'-x'	31566		315646		3444666		15623245	553324366
 
-## Version used: 8.2.12
+### Version used: 8.2.12 (multi-threaded)
 
 ### Command:
 
