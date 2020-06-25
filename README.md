@@ -4,13 +4,13 @@
 
 # 1. Explanation of test data
 
-## 1.1 3 levels of data 
+## 1.1 Three levels of data 
 
 * Vietnam (Ho Chi Minh City) lineage 2 - 'HCMC_L2'
 * Global lineage 2 - 'Global_L2'
 * Global lineages 1, 2 and 4 - 'Global_L124'
 
-## 1.2 4 data set sizes each
+## 1.2 Four dataset sizes each
 
 HCMC_L2 and Global_L2 (n=821 and n=940 respectively)
 
@@ -25,10 +25,11 @@ Random samples of 10, 20 and 50 percent of isolates, plus all isolates
 Global_L124 (n=2965)
 Random samples of (n=)100, 500, 1000 and 2000 isolates
 
-		100	'_r100'
-		500	'_r500'
-		1000	'_r1000'
-		2000	'_r2000'
+	size	label
+	100	'_r100'
+	500	'_r500'
+	1000	'_r1000'
+	2000	'_r2000'
 
 
 Examples of each step using 'HCMC_L2_r10p' are given below. The relevant data will be found in the first folder for the step each is introduced.
@@ -56,13 +57,14 @@ The three modules used in this run are 'filter', which uses 'TB_excluded_regions
 
 ### Command:
 
-python parseSNPtable.py -s NC_000962_alleles_3786strains_var.csv -x step3/TB_excluded_regions_with_repeat.txt -r step/3NC_00962_3_1.gbk -m filter,cons,aln -l step2/HCMC_L2_r10p.txt -p HCMC_L2_r10p_ -c 0.95
+python parseSNPtable.py -s NC_000962_alleles_3786strains_var.csv -x step3/TB_excluded_regions_with_repeat.txt -r step3/NC_00962_3_1.gbk -m filter,cons,aln -l step2/HCMC_L2_r10p.txt -p HCMC_L2_r10p_ -c 0.95
 
 Conservation Note:
 
-		r10p, r20p, r100	-c 0.95
-		r50p, r500	-c 0.99
-		all, r1000, r2000	-c 0.995
+	dataset	conservation level
+	r10p, r20p, r100	-c 0.95
+	r50p, r500	-c 0.99
+	all, r1000, r2000	-c 0.995
 
 Outputs (of importance to us)
 
@@ -101,3 +103,12 @@ In each case, the tree used was the 'RAxML_bipartitions' version. The 'best' RAx
 # 9. Compare expected and observed results
 
 # 10. Further statistical analysis
+
+# 11. Real Datasets
+
+## 11.1 _Elizabethkingia_
+
+## 11.2 _Burkholderia_
+
+## 11.3 _Mycobacterium tuberculosis_
+
