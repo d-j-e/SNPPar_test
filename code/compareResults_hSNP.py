@@ -252,9 +252,9 @@ def testOutput(output_file_name,header):
 	return
 
 def compareResults(arguments):
-	output_file_name = "homoplasic_test_results.tsv"
-	output_file_name1 = arguments.sorting + '_' + arguments.population +'_'+ str(arguments.size) +'_'+ arguments.replicate + "_incorrect_homoplasic_calls.tsv"
-	output_file_name2 = arguments.sorting + '_' + arguments.population +'_'+ str(arguments.size) +'_'+ arguments.replicate + "_incorrect_homoplasic_test_calls.tsv"
+	output_file_name = "fastml_homoplasic_test_results.tsv"
+	output_file_name1 = arguments.sorting + '_' + arguments.population +'_'+ str(arguments.size) +'_'+ arguments.replicate + "_fastml_incorrect_homoplasic_calls.tsv"
+	output_file_name2 = arguments.sorting + '_' + arguments.population +'_'+ str(arguments.size) +'_'+ arguments.replicate + "_fastml_incorrect_homoplasic_test_calls.tsv"
 	testOutput(output_file_name,True)
 	testOutput(output_file_name1,False)
 	testOutput(output_file_name2,False)
