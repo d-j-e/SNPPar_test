@@ -132,18 +132,18 @@ python processSeqGen.py -i [seqgen_output_example] -p HCMC_L2_r10p_r1
 **E/O corrections**
 
     replicate 		expected	observed	E/O
-    HCMC_L2_r10p		5561	125150	0.044
-    HCMC_L2_r20p		9027	188805	0.048
-    HCMC_L2_r50p		16824	219728	0.077
-    HCMC_L2_all		25547	289022	0.088
-    Global_L2_r10p		4303	161383	0.027
-    Global_L2_r20p		7956	201160	0.04
-    Global_L2_r50p		17971	250597	0.052
-    Global_L2_all		20014	256046	0.078
-    Global_L124_r100	12911	139064	0.093
-    Global_L124_r500	29442	213650	0.138
-    Global_L124_r1000	43038	281296	0.153
-    Global_L124_r2000	63451	398169	0.159
+    HCMC_L2_r10p		5561		125150		0.044
+    HCMC_L2_r20p		9027		188805		0.048
+    HCMC_L2_r50p		16824		219728		0.077
+    HCMC_L2_all		25547		289022		0.088
+    Global_L2_r10p		4303		161383		0.027
+    Global_L2_r20p		7956		201160		0.04
+    Global_L2_r50p		17971		250597		0.052
+    Global_L2_all		20014		256046		0.078
+    Global_L124_r100	12911		139064		0.093
+    Global_L124_r500	29442		213650		0.138
+    Global_L124_r1000	43038		281296		0.153
+    Global_L124_r2000	63451		398169		0.159
 
 The full set of outputs for all 120 replicates are available from the authors (david.edwards @ monash.edu - remove the spaces) as a 1.5 GB zipped archive. 
 
