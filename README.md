@@ -124,8 +124,6 @@ seqgen -m GTR -a 2.76 -f 0.15,0.35,0.34,0.16 -r 1.06,3.29,0.35,0.54,3.11,1 -z 43
 
 python processSeqGen.py -i [seqgen_output] -p [output_prefix]
 
-Seeds used [do I have these?????]
-
 **E/O corrections**
 
 replicate 	expected 	observed	E/O
