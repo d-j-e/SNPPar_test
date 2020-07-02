@@ -99,7 +99,7 @@ As the amount of simulated SNPs was found to be much higher than expected (due t
 
 Note: as the seqgen output files are so large, these have been excluded from the repository.
 
-The variable sites for each replicate were extracted using processSeqGen.py in the 'scripts' folder, and separated into those calls for internal nodes and tips. It produces the tips as both FASTA and SNP table output. The full set of outputs for all 120 replicates are in the folder 'data/Step5/simulated'
+The variable sites for each replicate were extracted using processSeqGen.py in the 'scripts' folder, and separated into those calls for internal nodes and tips. It produces the tips as both FASTA and SNP table output.
 
 ### Command 1, run 1:
 
@@ -108,15 +108,17 @@ seqgen -m GTR -a [alpha] -f [#A],[#C],[#G],[#T] -r [A<>C],[A<>G],[A<>T],[C<>G],[
 where values for -a -f and -r are found in 'set4/best_RAxML_runs.tsv'
 and treefile is the 'Phylip' format input for SeqGen containing the seed sequence (H37Rv, shortened to account for filtered sites). These can be found in 'data/Step5/phy_files'. The shortened sequence length is 4,022,248 bp (4,411,532 total genome length - 389,284 excluded bases).
 
-For HCMC_L2_r10p, the SeqGen command was:
+For HCMC_L2_r10p pre-run 1, the SeqGen command was:
 
 seqgen -m GTR -a 2.76 -f 0.15,0.35,0.34,0.16 -r 1.06,3.29,0.35,0.54,3.11,1 -z 439284 -of -wa -k1 mtb_short_seq_HCMC_L2_r10p.phy
 
-### Command 1, run 2:
+### Command 1, run 2 
+
+(note: number of SNPs established by running processSeqGen.py - see command 2):
 
 seqgen -m GTR -a [alpha] -f [#A],[#C],[#G],[#T] -r [A<>C],[A<>G],[A<>T],[C<>G],[C<>T],[G<>T] -z [seed] -of -wa -k1 [treefile] -t [E/O]
 
-For HCMC_L2_r10p, the SeqGen command was:
+For HCMC_L2_r10p run 1, the updated SeqGen command was:
 
 seqgen -m GTR -a 2.76 -f 0.15,0.35,0.34,0.16 -r 1.06,3.29,0.35,0.54,3.11,1 -z 439284 -of -wa -k1 mtb_short_seq_HCMC_L2_r10p.phy **-t 0.044**
 
@@ -124,53 +126,53 @@ seqgen -m GTR -a 2.76 -f 0.15,0.35,0.34,0.16 -r 1.06,3.29,0.35,0.54,3.11,1 -z 43
 
 python processSeqGen.py -i [seqgen_output] -p [output_prefix]
 
+For HCMC_L2_r10p run 1:
+python processSeqGen.py -i [seqgen_output_example] -p HCMC_L2_r10p_r1
+
+
 **E/O corrections**
 
-replicate 	expected 	observed	E/O
-HCMC_L2_r10p	5561	125150	0.044
-HCMC_L2_r20p	9027	188805	0.048
-HCMC_L2_r50p	16824	219728	0.077
-HCMC_L2_all	25547	289022	0.088
-Global_L2_r10p	4303	161383	0.027
-Global_L2_r20p	7956	201160	0.04
-Global_L2_r50p	17971	250597	0.052
-Global_L2_all	20014	256046	0.078
-Global_L124_r100	12911	139064	0.093
-Global_L2_r500	29442	213650	0.138
-Global_L2_r1000	43038	281296	0.153
-Global_L2_r2000	63451	398169	0.159
+    replicate 	expected 	observed	E/O
+    HCMC_L2_r10p	5561	125150	0.044
+    HCMC_L2_r20p	9027	188805	0.048
+    HCMC_L2_r50p	16824	219728	0.077
+    HCMC_L2_all	25547	289022	0.088
+    Global_L2_r10p	4303	161383	0.027
+    Global_L2_r20p	7956	201160	0.04
+    Global_L2_r50p	17971	250597	0.052
+    Global_L2_all	20014	256046	0.078
+    Global_L124_r100	12911	139064	0.093
+    Global_L2_r500	29442	213650	0.138
+    Global_L2_r1000	43038	281296	0.153
+    Global_L2_r2000	63451	398169	0.159
 
-The full set of outputs for all 120 replicates are in the folder 'data/Step5/simulated'
+The full set of outputs for all 120 replicates are in the archive 'data/Step5/simulated.zip'. In the subfolder 'data/Step5/simulated' is the folder with the results for run 1 of HCMC_L2_r10p (*sans* SeqGen output as discussed above).
 
-# 6. Extract expected homoplasies
-
-### Command:
-
-# 7. Extract mutation events (expected)
+# 6. Extract expected mutation events and homoplasies
 
 ### Command:
 
-# 8. Run simulated data with SNPPar (observed)
+# 7. Run simulated data with SNPPar (observed)
 
 ### Command:
 
-# 9. Compare expected and observed results
+# 8. Compare expected and observed results
 
 ### Command:
 
-# 10. Further statistical analysis
+# 9. Further statistical analysis
 
-# 11. Real Datasets
+# 10. Real Datasets
 
-## 11.1 _Elizabethkingia anophelis_
-
-### Command:
-
-## 11.2 _Burkholderia dolosa_
+## 10.1 _Elizabethkingia anophelis_
 
 ### Command:
 
-## 11.3 _Mycobacterium tuberculosis_
+## 10.2 _Burkholderia dolosa_
+
+### Command:
+
+## 10.3 _Mycobacterium tuberculosis_
 
 ### Command:
 
