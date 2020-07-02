@@ -145,7 +145,7 @@ python processSeqGen.py -i [seqgen_output_example] -p HCMC_L2_r10p_r1
     Global_L124_r1000	43038		281296		0.153
     Global_L124_r2000	63451		398169		0.159
 
-The full set of outputs for all 120 replicates are available from the authors (david.edwards @ monash.edu - remove the spaces) as a 1.5 GB zipped archive. 
+The full set of outputs for all 120 replicates are available from the authors (email david.edwards @ monash.edu - remove the spaces, with 'SNPPar test data' as title) as a 1.5 GB zipped archive. 
 
 In the subfolder 'data/Step5/simulated' is the folder with the results for run 1 of HCMC_L2_r10p (*sans* SeqGen output as discussed above).
 
