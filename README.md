@@ -193,7 +193,7 @@ In the subfolder 'data/Step5/simulated' is the folder with the results for run 1
 
 ## 10.3 _Mycobacterium tuberculosis_
 
-### Reference genomes:
+### Reference genome:
 
 ### SNPtable:
 
