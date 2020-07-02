@@ -163,17 +163,44 @@ In the subfolder 'data/Step5/simulated' is the folder with the results for run 1
 
 # 9. Further statistical analysis
 
+### R-markdown script
+
 # 10. Real Datasets
 
 ## 10.1 _Elizabethkingia anophelis_
 
+### Reference genome:
+
+### SNPtable:
+
+### Tree:
+
 ### Command:
+
+### Post-run analysis:
 
 ## 10.2 _Burkholderia dolosa_
 
-### Command:
+### Reference genomes:
+
+### SNPtable:
+
+### Tree:
+
+### Commands:
+
+### Post-run analysis:
 
 ## 10.3 _Mycobacterium tuberculosis_
 
+### Reference genomes:
+
+### SNPtable:
+
+### Tree:
+
 ### Command:
 
+### Post-run analysis:
+
+### R-markdown script:
