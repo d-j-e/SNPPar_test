@@ -97,7 +97,7 @@ Note: [SeqGen](http://tree.bio.ed.ac.uk/software/seqgen/) was also run on a comp
 
 As the amount of simulated SNPs was found to be much higher than expected (due to a poor choice of ascertainment bias correction used in RAxML), for each of the 12 datatsets an internal correction was used where branch lengths were multiplied by the expected number of SNPs (the number of SNPs in the real dataset that created the tree) divided by the observed simulated SNPs in the first run of each of the twelve populations/samplesize combinations ('E/O', see table below for values used here).
 
-Note: as the seqgen output files are so large, these have been excluded from the repository.
+Note: as the seqgen output files are so large, these have been excluded from the repository. The same goes for the majority of the output files for this step in the process (see below to get access)
 
 The variable sites for each replicate were extracted using processSeqGen.py in the 'scripts' folder, and separated into those calls for internal nodes and tips. It produces the tips as both FASTA and SNP table output.
 
