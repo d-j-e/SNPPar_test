@@ -212,10 +212,45 @@ where -e are the homoplasic events produced by SeqGen, and -o are the homoplasic
 
 For HCMC_L2_r10p run 1:
 
-python compareResults_hSNP.py -e HCMC_L2_r10p_r1_homoplasic_mutation_events.csv -o simulated_out/HCMC_L2_r10p/homoplasic_events_all_calls.tsv -c 5758 -r r1 -t 10.17 -m 90202112 -T HCMC_L2_r10p.tre -S S
+python compareResults_hSNP.py -e HCMC_L2_r10p_r1_homoplasic_mutation_events.csv -o simulated_out/HCMC_L2_r10p/homoplasic_events_all_calls.tsv -c 5758 -p HCMC_L2 -s 82 -r r1 -t 10.17 -m 90202112 -T HCMC_L2_r10p.tre -S S
 
 This script either produces a new results file, or appends to an existing file.
-The resulting file is included ('').
+The resulting file is included ('homoplasic_test_results.tsv').
+
+However, the results do need to be curated as they are collated...
+
+Two other files are produced for each comparison, 'incorrect_homoplasic_calls.tsv' and 'incorrect_type_homoplasic_calls.tsv'
+
+For HCMC_L2_r10p run 1, these files are:
+
+S_HCMC_L2_84_r1_incorrect_homoplasic_calls.tsv
+S_HCMC_L2_84_r1_incorrect_homoplasic_test_calls.tsv
+
+However, as there are no errors for run 1, these are empty files.
+
+Examples of errors include, for Global_L124 r1000 run8 ('intermediate' sorting):
+
+I_Global_L124_1000_r8_incorrect_homoplasic_calls.tsv
+
+False Negative
+2881482	N30	N31	A	G
+2881482	N31	N32	G	A
+
+I_Global_L124_1000_r8_incorrect_homoplasic_test_calls.tsv
+
+expected	149521	Y	R
+observed	149521	Y	P
+expected	170130	Y	R
+observed	170130	Y	P
+expected	881703	N	P
+observed	881703	N	PP
+expected	2316301	N	P
+observed	2316301	N	PP
+
+The first two errors (149521 and 170130) are examples of incorrect type calls at the root node of the tree, both where a reversion is expected, but SNPPar called a parallel event.
+
+The last two 'errors' (881703 and 2316301) are not actual errors, but are called when the mutation event ocurs in overlapping genes (SNPPar reports a mutation event for both genes, whilst the expected results do not include gene information, so are only expected once). 
+Note that as SNPs involving more than two events are more difficult to analyse, these are reported by compareResults_hSNP.py at the command line for immediate checking by the user.
 
 # 8. Run empirical data with SNPPar
 
