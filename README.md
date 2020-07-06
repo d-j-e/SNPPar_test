@@ -169,21 +169,37 @@ For HCMC_L2_r10p run 1:
 
 python extractHomoplasies.py -n HCMC_L2_r10p_r1_nodes.fasta -t HCMC_L2_r10p_r1.fasta -T HCMC_L2_r10p.tre -l HCMC_L2_r10p_r1_SNPList.txt -p HCMC_L2_r10p_r1
 
-# 7. Run simulated data with SNPPar (observed)
+# 7. Run simulated data with SNPPar (observed) and compare expected and observed results
 
-### Command:
+These next two steps are run iteratively for each replicate to directly save the time and memory information for each run. Note that for the simulated data sets only intermediate and simple sorting were tested.
 
-# 8. Compare expected and observed results
+### Command 1:
 
-### Command:
+/usr/bin/time -lp snppar -g NC_00962_3_1.gbk -d [output_directory] -t [tree] -s [alleles.csv]
 
-# 9. Further statistical analysis
+For HCMC_L2_r10p run 1:
+
+/usr/bin/time -lp snppar -g NC_00962_3_1.gbk -d simulated_out/HCMC_L2_r10p/ -t HCMC_L2_r10p.tre -s simulated/HCMC_L2_r10p/HCMC_L2_r10p_r1_alleles.csv
+
+Note: add '-E S' for 'simple' sorting; intermediate is default
+
+### Command 2:
+
+python compareResults_hSNP.py -e [homoplasic_mutation_events.csv] -o [homoplasic_events_all_calls.tsv] -c [SNP count] -p [population] -s [sample size] -r [run] -t [time] -m [memory] -T [tree] -S [sorting]
+
+
+
+For HCMC_L2_r10p run 1:
+
+python compareResults_hSNP.py -e HCMC_L2_r10p_r1_homoplasic_mutation_events.csv -o 
+
+# 8. Further statistical analysis
 
 ### R-markdown script
 
-# 10. Real Datasets
+# 9. Real Datasets
 
-## 10.1 _Elizabethkingia anophelis_
+## 9.1 _Elizabethkingia anophelis_
 
 ### Reference genome:
 
@@ -195,7 +211,7 @@ python extractHomoplasies.py -n HCMC_L2_r10p_r1_nodes.fasta -t HCMC_L2_r10p_r1.f
 
 ### Post-run analysis:
 
-## 10.2 _Burkholderia dolosa_
+## 9.2 _Burkholderia dolosa_
 
 ### Reference genomes:
 
@@ -207,7 +223,7 @@ python extractHomoplasies.py -n HCMC_L2_r10p_r1_nodes.fasta -t HCMC_L2_r10p_r1.f
 
 ### Post-run analysis:
 
-## 10.3 _Mycobacterium tuberculosis_
+## 9.3 _Mycobacterium tuberculosis_
 
 ### Reference genome:
 
