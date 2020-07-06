@@ -166,6 +166,7 @@ Once we have the SNP list for each replicate data set, we can extract the expect
 python extractHomoplasies.py -n [nodes.fasta] -t [tips.fasta] -T [tree] -l [SNP list] -p [output_prefix]
 
 For HCMC_L2_r10p run 1:
+
 python extractHomoplasies.py -n HCMC_L2_r10p_r1_nodes.fasta -t HCMC_L2_r10p_r1.fasta -T HCMC_L2_r10p.tre -l HCMC_L2_r10p_r1_SNPList.txt -p HCMC_L2_r10p_r1
 
 # 7. Run simulated data with SNPPar (observed)
