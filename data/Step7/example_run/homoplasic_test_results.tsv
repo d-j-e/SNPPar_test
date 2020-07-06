@@ -1,2 +1,2 @@
 Sorting	Population	Sample_Size	SNP_Calls	Time	Memory	True_Positive	False_Positive	False_Negative	True_Negative	correct_calls	incorrect_calls	parallel_events	convergent_events	revertant_events	root_node_correct	root_node_incorrect	single_calls	single_call_correct_P	single_call_correct_C	single_call_correct_R	single_call_incorrect_PC	single_call_incorrect_PR	single_call_incorrect_CP	single_call_incorrect_CR	single_call_incorrect_RP	single_call_incorrect_RC
-S	HCMC_L2	84	5758	0.17	86.02	4	0	0	5754	4	0	4	0	0	0	0	4	4	0	0	0	0	0	0	0	0
+S	HCMC_L2	82	5758	0.17	86.02	4	0	0	5754	4	0	4	0	0	0	0	4	4	0	0	0	0	0	0	0	0

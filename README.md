@@ -182,7 +182,7 @@ For HCMC_L2_r10p run 1:
 
 /usr/bin/time -lp snppar -g NC_00962_3_1.gbk -d simulated_out/HCMC_L2_r10p/ -t HCMC_L2_r10p.tre -s simulated/HCMC_L2_r10p/HCMC_L2_r10p_r1_alleles.csv
 
-Note: add '-E S' for 'simple' sorting; 'intermediate' sorting is default
+Note: '-E S' is added for 'simple' sorting; 'intermediate' sorting is default
 
 Example output of 'time' command for a SNPPar run:
 
@@ -223,34 +223,35 @@ Two other files are produced for each comparison, 'incorrect_homoplasic_calls.ts
 
 For HCMC_L2_r10p run 1, these files are:
 
-S_HCMC_L2_84_r1_incorrect_homoplasic_calls.tsv
-S_HCMC_L2_84_r1_incorrect_homoplasic_test_calls.tsv
+  S_HCMC_L2_82_r1_incorrect_homoplasic_calls.tsv
+  S_HCMC_L2_82_r1_incorrect_homoplasic_test_calls.tsv
 
 However, as there are no errors for run 1, these are empty files.
 
 Examples of errors include, for Global_L124 r1000 run8 ('intermediate' sorting):
 
-I_Global_L124_1000_r8_incorrect_homoplasic_calls.tsv
+**I_Global_L124_1000_r8_incorrect_homoplasic_calls.tsv**
 
-False Negative
-2881482	N30	N31	A	G
-2881482	N31	N32	G	A
+    False Negative
+    2881482	N30	N31	A	G
+    2881482	N31	N32	G	A
 
-I_Global_L124_1000_r8_incorrect_homoplasic_test_calls.tsv
+**I_Global_L124_1000_r8_incorrect_homoplasic_test_calls.tsv**
 
-expected	149521	Y	R
-observed	149521	Y	P
-expected	170130	Y	R
-observed	170130	Y	P
-expected	881703	N	P
-observed	881703	N	PP
-expected	2316301	N	P
-observed	2316301	N	PP
+    expected	149521	Y	R
+    observed	149521	Y	P
+    expected	170130	Y	R
+    observed	170130	Y	P
+    expected	881703	N	P
+    observed	881703	N	PP
+    expected	2316301	N	P
+    observed	2316301	N	PP
 
-The first two errors (149521 and 170130) are examples of incorrect type calls at the root node of the tree, both where a reversion is expected, but SNPPar called a parallel event.
+The incorrect homoplasy call reported (position 2881482) is an example of a homoplasic event that was missed by SNPPar (i.e. false-negative) - here, ASR will assign a single event (A->G) to the sister branch of N31-N32 rather than the expected reversion.
 
-The last two 'errors' (881703 and 2316301) are not actual errors, but are called when the mutation event ocurs in overlapping genes (SNPPar reports a mutation event for both genes, whilst the expected results do not include gene information, so only expected once). 
-Note that as SNPs involving more than two events are more difficult to analyse, these are reported by compareResults_hSNP.py at the command line for immediate checking by the user.
+The first two type call errors (149521 and 170130) are examples of incorrect type calls at the root node of the tree, both where a reversion is expected, but SNPPar called a parallel event.
+
+The last two 'errors' (881703 and 2316301) are not actual errors, but are called when the mutation event ocurs in overlapping genes (SNPPar reports a mutation event for both genes, whilst the expected results do not include gene information, so only expected once). Note that as SNPs involving more than two events are more difficult to analyse, these are reported by compareResults_hSNP.py at the command line for immediate checking by the user.
 
 # 8. Run empirical data with SNPPar
 
