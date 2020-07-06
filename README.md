@@ -97,30 +97,30 @@ Note: [SeqGen](http://tree.bio.ed.ac.uk/software/seqgen/) was also run on a comp
 
 As the amount of simulated SNPs was found to be much higher than expected (due to a poor choice of ascertainment bias correction used in RAxML), for each of the 12 datatsets an internal correction was used where branch lengths were multiplied by the expected number of SNPs (the number of SNPs in the real dataset that created the tree) divided by the observed simulated SNPs in the first run of each of the twelve populations/samplesize combinations ('E/O', see table below for values used here).
 
-Note: as the seqgen output files are so large, these have been excluded from the repository. The same goes for the majority of the output files for this step in the process (see below to get access)
+Note: as the seqgen output files are so large, these have been excluded from the repository.
 
 The variable sites for each replicate were extracted using processSeqGen.py in the 'scripts' folder, and separated into those calls for internal nodes and tips. It produces the tips as both FASTA and SNP table output.
 
 ### Command 1, run 1:
 
-seqgen -m GTR -a [alpha] -f [#A],[#C],[#G],[#T] -r [A<>C],[A<>G],[A<>T],[C<>G],[C<>T],[G<>T] -z [seed] -of -wa -k1 [treefile]
+seqgen -m GTR -a [alpha] -f [#A],[#C],[#G],[#T] -r [A<>C],[A<>G],[A<>T],[C<>G],[C<>T],[G<>T] -of -wa -k1 [treefile]
 
 where values for -a -f and -r are found in 'set4/best_RAxML_runs.tsv'
 and treefile is the 'Phylip' format input for SeqGen containing the seed sequence (H37Rv, shortened to account for filtered sites). These can be found in 'data/Step5/phy_files'. The shortened sequence length is 4,022,248 bp (4,411,532 total genome length - 389,284 excluded bases).
 
 For HCMC_L2_r10p pre-run 1, the SeqGen command was:
 
-seqgen -m GTR -a 2.76 -f 0.15,0.35,0.34,0.16 -r 1.06,3.29,0.35,0.54,3.11,1 -z 439284 -of -wa -k1 mtb_short_seq_HCMC_L2_r10p.phy
+seqgen -m GTR -a 2.76 -f 0.15,0.35,0.34,0.16 -r 1.06,3.29,0.35,0.54,3.11,1 -of -wa -k1 mtb_short_seq_HCMC_L2_r10p.phy
 
 ### Command 1, run 2 
 
 (note: number of SNPs established by running processSeqGen.py - see command 2):
 
-seqgen -m GTR -a [alpha] -f [#A],[#C],[#G],[#T] -r [A<>C],[A<>G],[A<>T],[C<>G],[C<>T],[G<>T] -z [seed] -of -wa -k1 [treefile] -t [E/O]
+seqgen -m GTR -a [alpha] -f [#A],[#C],[#G],[#T] -r [A<>C],[A<>G],[A<>T],[C<>G],[C<>T],[G<>T] -of -wa -k1 [treefile] -t [E/O]
 
 For HCMC_L2_r10p run 1, the updated SeqGen command was:
 
-seqgen -m GTR -a 2.76 -f 0.15,0.35,0.34,0.16 -r 1.06,3.29,0.35,0.54,3.11,1 -z 439284 -of -wa -k1 mtb_short_seq_HCMC_L2_r10p.phy **-t 0.044**
+seqgen -m GTR -a 2.76 -f 0.15,0.35,0.34,0.16 -r 1.06,3.29,0.35,0.54,3.11,1 -of -wa -k1 mtb_short_seq_HCMC_L2_r10p.phy **-t 0.044**
 
 ### Command 2:
 
@@ -145,9 +145,7 @@ python processSeqGen.py -i [seqgen_output_example] -p HCMC_L2_r10p_r1
     Global_L124_r1000	43038		281296		0.153
     Global_L124_r2000	63451		398169		0.159
 
-The full set of outputs for all 120 replicates are available from the authors (email david.edwards @ monash.edu - remove the spaces, with 'SNPPar test data' as title) as a 1.5 GB zipped archive. 
-
-In the subfolder 'data/Step5/simulated' is the folder with the results for run 1 of HCMC_L2_r10p (*sans* SeqGen output as discussed above).
+In the subfolder 'data/Step5/simulated/HCMC_L2)r10p' is the folder with the results for run 1 to 10 of HCMC_L2_r10p (*sans* SeqGen output as discussed above). The rest of the outputs for the 11 other datasets are either zipped into a single file (e.g. 'HCMC_L2_r20p.zip' in 'Step5/simulated') or split into separate zipped files (<100 MB for GitHub, e.g. 'Global_L124_r1000_r1_to_r3.zip' in 'Step5/simulated/Global_L124_r1000').
 
 # 6. Extract expected mutation events and homoplasies
 
