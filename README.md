@@ -184,7 +184,7 @@ For HCMC_L2_r10p run 1:
 
 Note: add '-E S' for 'simple' sorting; 'intermediate' sorting is default
 
-Example output of 'time' command for the SNPPar run:
+Example output of 'time' command for a SNPPar run:
 
     real        10.17		<- run time (-t)
     user         8.71
