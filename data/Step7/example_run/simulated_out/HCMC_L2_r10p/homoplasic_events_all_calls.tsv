@@ -1,0 +1,9 @@
+Position	Type	Ancestor_Node	Derived_Node	Ancestor_Call	Derived_Call	Gene	Strand	Codon	Codon_Position	Ancestor_Codon	Derived_Codon	Ancestor_A.A.	Derived_A.A.	Change	Up_Gene	Up_Gene_Strand	Up_Gene_Distance	Down_Gene	Down_Gene_Strand	Down_Gene_Distance
+603076	intragenic	N9	N12	G	A	Rv0511	1	86	3	CGG	CGA	R	R	S	-	-	-	-	-	-
+603076	intragenic	N26	02MTB0447_S106_L002	G	A	Rv0511	1	86	3	CGG	CGA	R	R	S	-	-	-	-	-	-
+1015418	intragenic	N10	02MTB0399_S184_L002	G	A	Rv0911	1	7	3	GCG	GCA	A	A	S	-	-	-	-	-	-
+1015418	intragenic	N81	02MTB1549	G	A	Rv0911	1	7	3	GCG	GCA	A	A	S	-	-	-	-	-	-
+2246587	intragenic	N3	02MTB1523	T	C	Rv2000	1	460	2	ATG	ACG	M	T	NS	-	-	-	-	-	-
+2246587	intragenic	N35	02MTB0148_S183_L002	T	C	Rv2000	1	460	2	ATG	ACG	M	T	NS	-	-	-	-	-	-
+2806725	intragenic	N7	02MTB1515	A	G	Rv2491	1	21	1	AGT	GGT	S	G	NS	-	-	-	-	-	-
+2806725	intragenic	N9	N12	A	G	Rv2491	1	21	1	AGT	GGT	S	G	NS	-	-	-	-	-	-

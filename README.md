@@ -249,7 +249,7 @@ observed	2316301	N	PP
 
 The first two errors (149521 and 170130) are examples of incorrect type calls at the root node of the tree, both where a reversion is expected, but SNPPar called a parallel event.
 
-The last two 'errors' (881703 and 2316301) are not actual errors, but are called when the mutation event ocurs in overlapping genes (SNPPar reports a mutation event for both genes, whilst the expected results do not include gene information, so are only expected once). 
+The last two 'errors' (881703 and 2316301) are not actual errors, but are called when the mutation event ocurs in overlapping genes (SNPPar reports a mutation event for both genes, whilst the expected results do not include gene information, so only expected once). 
 Note that as SNPs involving more than two events are more difficult to analyse, these are reported by compareResults_hSNP.py at the command line for immediate checking by the user.
 
 # 8. Run empirical data with SNPPar

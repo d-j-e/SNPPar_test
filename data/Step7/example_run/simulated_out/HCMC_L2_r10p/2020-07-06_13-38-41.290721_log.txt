@@ -1,0 +1,81 @@
+2020-07-06_13-38-41.290721: INFO : Log started: (./simulated_out/HCMC_L2_r10p/2020-07-06_13-38-41.290721_log.txt)
+2020-07-06_13:38:41.291255: INFO : SNPPar:	Parallel SNP Finder V1.0
+	(utilising TreeTime for ASR and intermediate sorting)
+2020-07-06_13:38:41.292412: INFO : User command: snppar -g ../NC_00962_3_1.gbk -d ./simulated_out/HCMC_L2_r10p/ -t ../trees/HCMC_L2_r10p.tre -s ./simulated/HCMC_L2_r10p/HCMC_L2_r10p_r1_alleles.csv
+2020-07-06_13:38:41.292694: INFO : Reading SNP table from ./simulated/HCMC_L2_r10p/HCMC_L2_r10p_r1_alleles.csv
+2020-07-06_13:38:41.492947: INFO : Finished reading 5758 SNPs in total
+...keeping 5758 variable SNPs and ignoring 0 SNPs
+that are non-variable among the 82 isolates
+2020-07-06_13:38:41.493504: INFO : Reading Genbank file from ../NC_00962_3_1.gbk
+2020-07-06_13:38:42.387881: INFO : Found 3906 genes
+2020-07-06_13:38:42.388259: INFO : Reading tree from ../trees/HCMC_L2_r10p.tre...
+2020-07-06_13:38:42.423552: INFO : Tree and SNP table have same isolates
+2020-07-06_13:38:42.423904: INFO : Parsing SNPs to find bi-, tri- and quadallelic SNPs...
+Also testing if biallelic SNPs are homoplasic
+2020-07-06_13:38:43.717580: INFO : Biallelic SNPs (>1 one isolate): 1660
+Biallelic SNPs (>1 one isolate, no missing calls): 1660
+Biallelic SNP patterns tested (no missing calls): 60
+Paraphyletic SNPs found: 4
+Triallelic SNPs found: 2
+Quadallelic SNPs found: 0
+
+Total SNPs for mapping: 6
+2020-07-06_13:38:43.719092: INFO : Assigning monophyletic SNPs to genes
+2020-07-06_13:38:43.740943: INFO : Of the 5752 monophyletic SNPs for testing, 636 are intergenic, and 5144 are intragenic
+2020-07-06_13:38:43.741309: INFO : 28 SNPs occur in overlapping genes
+2020-07-06_13:38:43.762178: INFO : Assigning SNPs to map to genes
+2020-07-06_13:38:43.762589: INFO : Of the 6 SNPs to map for testing, 0 are intergenic, and 6 are intragenic
+2020-07-06_13:38:43.764202: INFO : Running TreeTime: treetime ancestral --aln ./simulated_out/HCMC_L2_r10p/snps_to_map.mfasta --tree ../trees/HCMC_L2_r10p.tre --outdir ./simulated_out/HCMC_L2_r10p/treetime_out/ --report-ambiguous --verbose 2
+2020-07-06_13:38:46.837808: INFO : stdout: 
+0.00	-TreeAnc: set-up
+
+Inferred sequence evolution model (saved as ./simulated_out/HCMC_L2_r10p/treetime_out//sequence_evolution_model.txt):
+Substitution rate (mu): 1.0
+
+Equilibrium frequencies (pi_i):
+  A: 0.2724
+  C: 0.219
+  G: 0.2608
+  T: 0.2359
+  -: 0.0118
+
+Symmetrized rates from j->i (W_ij):
+	A	C	G	T	-
+  A	0	1.2085	1.8636	1.2061	1.0989
+  C	1.2085	0	1.0987	1.3185	1.1004
+  G	1.8636	1.0987	0	1.2063	1.0989
+  T	1.2061	1.3185	1.2063	0	1.099
+  -	1.0989	1.1004	1.0989	1.099	0
+
+Actual rates from j->i (Q_ij):
+	A	C	G	T	-
+  A	0	0.3293	0.5077	0.3286	0.2994
+  C	0.2647	0	0.2406	0.2888	0.241
+  G	0.486	0.2865	0	0.3146	0.2866
+  T	0.2846	0.3111	0.2846	0	0.2593
+  -	0.013	0.013	0.013	0.013	0
+
+
+--- alignment including ancestral nodes saved as  
+	 ./simulated_out/HCMC_L2_r10p/treetime_out/ancestral_sequences.fasta
+
+--- tree saved in nexus format as  
+	 ./simulated_out/HCMC_L2_r10p/treetime_out/annotated_tree.nexus
+
+2020-07-06_13:38:46.838314: INFO : Extracting mutation events from ASR results...
+2020-07-06_13:38:46.842610: INFO : Extracting internal node sequences from ASR results...
+2020-07-06_13:38:46.843884: INFO : Processing mapped mutation events...
+2020-07-06_13:38:46.844225: INFO : Processing monophyletic mutation events...
+2020-07-06_13:38:48.613447: INFO : Combining monophyletic and mapped mutation events
+Also combining monophyletic and mapped node sequences...
+2020-07-06_13:38:48.620305: INFO : Writing node sequences to ./simulated_out/HCMC_L2_r10p/node_sequences.fasta
+2020-07-06_13:38:48.769041: INFO : Assigning coding consequenses to the mutation events...
+2020-07-06_13:38:50.589084: INFO : 3719 non-synonymous changes, 1437 synonymous changes, and 636 SNP events in non-coding regions
+2020-07-06_13:38:50.589460: INFO : Parsing all mutation events...
+2020-07-06_13:38:50.592925: INFO : Found 8 mutation events that are homoplasic
+2020-07-06_13:38:50.593290: INFO : Writing all calls at homoplasic event positions to ./simulated_out/HCMC_L2_r10p/homoplasic_events_all_calls.tsv
+2020-07-06_13:38:50.605257: INFO : Writing all mutation events to ./simulated_out/HCMC_L2_r10p/all_mutation_events.tsv
+2020-07-06_13:38:50.950745: INFO : Mapping mutation events to NEXUS tree: ./simulated_out/HCMC_L2_r10p/node_labelled_nexus.tre
+2020-07-06_13:38:50.957780: INFO : Also mapping mutation events to Newick NHX tree: ./simulated_out/HCMC_L2_r10p/node_labelled_newick.tre
+2020-07-06_13:38:50.962631: INFO : Cleaning up intermediate files...
+2020-07-06_13:38:50.977874: INFO : ...Finished
