@@ -181,25 +181,25 @@ For HCMC_L2_r10p run 1:
 
 /usr/bin/time -lp snppar -g NC_00962_3_1.gbk -d simulated_out/HCMC_L2_r10p/ -t HCMC_L2_r10p.tre -s simulated/HCMC_L2_r10p/HCMC_L2_r10p_r1_alleles.csv
 
-Note: add '-E S' for 'simple' sorting; intermediate is default
+Note: add '-E S' for 'simple' sorting; 'intermediate' sorting is default
 
 ### Command 2:
 
 python compareResults_hSNP.py -e [homoplasic_mutation_events.csv] -o [homoplasic_events_all_calls.tsv] -c [SNP count] -p [population] -s [sample size] -r [run] -t [time] -m [memory] -T [tree] -S [sorting]
 
-
-
 For HCMC_L2_r10p run 1:
 
 python compareResults_hSNP.py -e HCMC_L2_r10p_r1_homoplasic_mutation_events.csv -o 
 
-# 8. Further statistical analysis
+# 8. Run empirical data with SNPPar
+
+# 9. Further statistical analysis
 
 ### R-markdown script
 
-# 9. Real Datasets
+# 10. Published Datasets
 
-## 9.1 _Elizabethkingia anophelis_
+## 10.1 _Elizabethkingia anophelis_
 
 ### Reference genome:
 
@@ -211,7 +211,7 @@ python compareResults_hSNP.py -e HCMC_L2_r10p_r1_homoplasic_mutation_events.csv 
 
 ### Post-run analysis:
 
-## 9.2 _Burkholderia dolosa_
+## 10.2 _Burkholderia dolosa_
 
 ### Reference genomes:
 
@@ -223,7 +223,7 @@ python compareResults_hSNP.py -e HCMC_L2_r10p_r1_homoplasic_mutation_events.csv 
 
 ### Post-run analysis:
 
-## 9.3 _Mycobacterium tuberculosis_
+## 10.3 _Mycobacterium tuberculosis_
 
 ### Reference genome:
 
