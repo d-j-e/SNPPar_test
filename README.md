@@ -149,7 +149,24 @@ In the subfolder 'data/Step5/simulated/HCMC_L2)r10p' is the folder with the resu
 
 # 6. Extract expected mutation events and homoplasies
 
+Because I forgot to extract the SNP lists with the previous function, we first need to extract the SNP lists for all 120 replicates.
+
 ### Command:
+
+python SNPTableToList.py -i [SNPTable.csv] -p [output_prefix]
+
+For HCMC_L2_r10p run 1:
+
+python SNPTableToList.py -i HCMC_L2_r10p_r1_alleles.csv -p HCMC_L2_r10p_r1
+
+Once we have the SNP list for each replicate data set, we can extract the expected homoplasic mutation events from the node and tip sequence data.
+
+### Command:
+
+python extractHomoplasies.py -n [nodes.fasta] -t [tips.fasta] -T [tree] -l [SNP list] -p [output_prefix]
+
+For HCMC_L2_r10p run 1:
+python extractHomoplasies.py -n HCMC_L2_r10p_r1_nodes.fasta -t HCMC_L2_r10p_r1.fasta -T HCMC_L2_r10p.tre -l HCMC_L2_r10p_r1_SNPList.txt -p HCMC_L2_r10p_r1
 
 # 7. Run simulated data with SNPPar (observed)
 
