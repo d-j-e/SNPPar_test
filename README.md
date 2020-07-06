@@ -127,6 +127,7 @@ seqgen -m GTR -a 2.76 -f 0.15,0.35,0.34,0.16 -r 1.06,3.29,0.35,0.54,3.11,1 -of -
 python processSeqGen.py -i [seqgen_output] -p [output_prefix]
 
 For HCMC_L2_r10p run 1:
+
 python processSeqGen.py -i [seqgen_output_example] -p HCMC_L2_r10p_r1
 
 **E/O corrections**
@@ -214,7 +215,7 @@ For HCMC_L2_r10p run 1:
 python compareResults_hSNP.py -e HCMC_L2_r10p_r1_homoplasic_mutation_events.csv -o simulated_out/HCMC_L2_r10p/homoplasic_events_all_calls.tsv -c 5758 -r r1 -t 10.17 -m 90202112 -T HCMC_L2_r10p.tre -S S
 
 This script either produces a new results file, or appends to an existing file.
-The resulting file is included.
+The resulting file is included ('').
 
 # 8. Run empirical data with SNPPar
 
