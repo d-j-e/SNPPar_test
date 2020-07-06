@@ -215,7 +215,7 @@ For HCMC_L2_r10p run 1:
 python compareResults_hSNP.py -e HCMC_L2_r10p_r1_homoplasic_mutation_events.csv -o simulated_out/HCMC_L2_r10p/homoplasic_events_all_calls.tsv -c 5758 -p HCMC_L2 -s 82 -r r1 -t 10.17 -m 90202112 -T HCMC_L2_r10p.tre -S S
 
 This script either produces a new results file, or appends to an existing file.
-The resulting file is included ('homoplasic_test_results.tsv').
+The resulting file is included ('homoplasic_test_results.tsv'); this is the file with the results for R analysis (see below).
 
 However, the results do need to be curated as they are collated...
 
