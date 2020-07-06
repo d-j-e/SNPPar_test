@@ -247,7 +247,7 @@ Examples of errors include, for Global_L124 r1000 run8 ('intermediate' sorting):
     expected	2316301	N	P
     observed	2316301	N	PP
 
-The incorrect homoplasy call reported (position 2881482) is an example of a homoplasic event that was missed by SNPPar (i.e. false-negative) - here, ASR will assign a single event (A->G) to the sister branch of N31-N32 rather than the expected reversion.
+The incorrect homoplasy call reported (position 2881482) is an example of a homoplasic event that was missed by SNPPar (i.e. false-negative) - here, ASR will have assigned a single event (A->G) to the sister branch of N31-N32 rather than the expected reversion.
 
 The first two type call errors (149521 and 170130) are examples of incorrect type calls at the root node of the tree, both where a reversion is expected, but SNPPar called a parallel event.
 
