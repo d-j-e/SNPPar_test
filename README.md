@@ -171,7 +171,7 @@ python extractHomoplasies.py -n HCMC_L2_r10p_r1_nodes.fasta -t HCMC_L2_r10p_r1.f
 
 # 7. Run simulated data with SNPPar (observed) and compare expected and observed results
 
-These next two steps are run iteratively for each replicate to directly save the time and memory information for each run. Note that for the simulated data sets only intermediate and simple sorting were tested.
+These next two steps are run iteratively for each replicate to directly save the time and memory information for each run. Note that for the simulated data sets only 'intermediate' and 'simple' sorting were tested.
 
 ### Command 1:
 
@@ -183,15 +183,42 @@ For HCMC_L2_r10p run 1:
 
 Note: add '-E S' for 'simple' sorting; 'intermediate' sorting is default
 
+Example output of 'time' command for the SNPPar run:
+
+    real        10.17		<- run time (-t)
+    user         8.71
+    sys          0.74
+    90202112  maximum resident set size 	<- maximum memory use (-m)
+         0  average shared memory size
+         0  average unshared data size
+         0  average unshared stack size
+     66443  page reclaims
+      2426  page faults
+         0  swaps
+         0  block input operations
+         0  block output operations
+         0  messages sent
+         0  messages received
+         0  signals received
+      1246  voluntary context switches
+     11716  involuntary context switches
+
 ### Command 2:
 
 python compareResults_hSNP.py -e [homoplasic_mutation_events.csv] -o [homoplasic_events_all_calls.tsv] -c [SNP count] -p [population] -s [sample size] -r [run] -t [time] -m [memory] -T [tree] -S [sorting]
 
+where -e are the homoplasic events produced by SeqGen, and -o are the homoplasic events called by SNPPar, -c is the SNP count for the replicate (alleles.csv), -p is the population (e.g. 'HCMC_L2'), -s is the actual sample size (e.g 84 for 'HCMC_L2_r10p'), -r is the replicate run (e.g. 'r1'), -t is the 'real' time from the 'time' command for the SNPPar run, -m is the maximum memory use from the same command (see example below), and -S is the type of sorting ('I' for 'intermediate' or 'S' for 'simple' - or 'C' for 'complex' with empirical data).
+
 For HCMC_L2_r10p run 1:
 
-python compareResults_hSNP.py -e HCMC_L2_r10p_r1_homoplasic_mutation_events.csv -o 
+python compareResults_hSNP.py -e HCMC_L2_r10p_r1_homoplasic_mutation_events.csv -o simulated_out/HCMC_L2_r10p/homoplasic_events_all_calls.tsv -c 5758 -r r1 -t 10.17 -m 90202112 -T HCMC_L2_r10p.tre -S S
+
+This script either produces a new results file, or appends to an existing file.
+The resulting file is included.
 
 # 8. Run empirical data with SNPPar
+
+
 
 # 9. Further statistical analysis
 
