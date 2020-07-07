@@ -228,7 +228,7 @@ For HCMC_L2_r10p run 1, these files are:
 
 However, as there are no errors for run 1, these are empty files.
 
-Examples of errors include, for Global_L124 r1000 run8 ('intermediate' sorting):
+Examples of errors for Global_L124 r1000 run8 ('intermediate' sorting) include:
 
 **I_Global_L124_1000_r8_incorrect_homoplasic_calls.tsv**
 
