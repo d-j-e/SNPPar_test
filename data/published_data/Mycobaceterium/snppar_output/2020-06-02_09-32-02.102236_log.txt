@@ -1,0 +1,82 @@
+2020-06-02_09-32-02.102236: INFO : Log started: (Global_L124_r2000_out_snppar_run_2/2020-06-02_09-32-02.102236_log.txt)
+2020-06-02_09:32:02.104751: INFO : SNPPar:	Parallel SNP Finder V1.0
+	(utilising TreeTime for ASR and intermediate sorting)
+2020-06-02_09:32:02.105896: INFO : User command: snppar -s Global_L124_r2000_out_NC_000962_alleles_2001strains_regionFiltered_cons0.995_var_hardFiltered.csv -g ../NC_00962_3_1.gbk -t Mtb_GL124_2000_out_c995_root.tre -d Global_L124_r2000_out_snppar_run_2 -p Global_L124_all_r2000_out
+2020-06-02_09:32:02.106407: INFO : Reading SNP table from Global_L124_r2000_out_NC_000962_alleles_2001strains_regionFiltered_cons0.995_var_hardFiltered.csv
+2020-06-02_09:33:04.337840: INFO : Finished reading 63065 SNPs in total
+...keeping 63065 variable SNPs and ignoring 0 SNPs
+that are non-variable among the 2001 isolates
+2020-06-02_09:33:04.436695: INFO : Reading Genbank file from ../NC_00962_3_1.gbk
+2020-06-02_09:33:05.631120: INFO : Found 3906 genes
+2020-06-02_09:33:05.631510: INFO : Reading tree from Mtb_GL124_2000_out_c995_root.tre...
+2020-06-02_09:33:05.827977: INFO : Tree and SNP table have same isolates
+2020-06-02_09:33:05.828467: INFO : Parsing SNPs to find bi-, tri- and quadallelic SNPs...
+Also testing if biallelic SNPs are homoplasic
+2020-06-02_10:00:54.753326: INFO : Biallelic SNPs (>1 one isolate): 25635
+Biallelic SNPs (>1 one isolate, no missing calls): 16564
+Biallelic SNP patterns tested (no missing calls): 1467
+Paraphyletic SNPs found: 395
+Triallelic SNPs found: 435
+Quadallelic SNPs found: 11
+
+Total SNPs for mapping: 9912
+2020-06-02_10:00:54.780984: INFO : Assigning monophyletic SNPs to genes
+2020-06-02_10:00:54.960194: INFO : Of the 53153 monophyletic SNPs for testing, 6197 are intergenic, and 47046 are intragenic
+2020-06-02_10:00:54.960581: INFO : 90 SNPs occur in overlapping genes
+2020-06-02_10:00:55.265245: INFO : Assigning SNPs to map to genes
+2020-06-02_10:00:55.305697: INFO : Of the 9912 SNPs to map for testing, 1366 are intergenic, and 8567 are intragenic
+2020-06-02_10:00:55.306060: INFO : 21 SNPs occur in overlapping genes
+2020-06-02_10:01:45.757503: INFO : Running TreeTime: treetime ancestral --aln Global_L124_r2000_out_snppar_run_2/Global_L124_all_r2000_outsnps_to_map.mfasta --tree Mtb_GL124_2000_out_c995_root.tre --outdir Global_L124_r2000_out_snppar_run_2/treetime_out/ --report-ambiguous --verbose 2
+2020-06-02_10:06:10.402879: INFO : stdout: 
+0.00	-TreeAnc: set-up
+
+Inferred sequence evolution model (saved as Global_L124_r2000_out_snppar_run_2/treetime_out//sequence_evolution_model.txt):
+Substitution rate (mu): 1.0
+
+Equilibrium frequencies (pi_i):
+  A: 0.1813
+  C: 0.301
+  G: 0.3203
+  T: 0.1876
+  -: 0.0099
+
+Symmetrized rates from j->i (W_ij):
+	A	C	G	T	-
+  A	0	0.914	2.9248	0.2707	0.1004
+  C	0.914	0	0.5883	2.8687	0.0963
+  G	2.9248	0.5883	0	0.8575	0.096
+  T	0.2707	2.8687	0.8575	0	0.1004
+  -	0.1004	0.0963	0.096	0.1004	0
+
+Actual rates from j->i (Q_ij):
+	A	C	G	T	-
+  A	0	0.1657	0.5302	0.0491	0.0182
+  C	0.2751	0	0.177	0.8634	0.029
+  G	0.9367	0.1884	0	0.2746	0.0308
+  T	0.0508	0.5382	0.1609	0	0.0188
+  -	0.001	0.001	0.001	0.001	0
+
+
+--- alignment including ancestral nodes saved as  
+	 Global_L124_r2000_out_snppar_run_2/treetime_out/ancestral_sequences.fasta
+
+--- tree saved in nexus format as  
+	 Global_L124_r2000_out_snppar_run_2/treetime_out/annotated_tree.nexus
+
+2020-06-02_10:06:10.405930: INFO : Extracting mutation events from ASR results...
+2020-06-02_10:06:23.501920: INFO : Extracting internal node sequences from ASR results...
+2020-06-02_10:06:39.870404: INFO : Processing mapped mutation events...
+2020-06-02_10:06:58.221579: INFO : Processing monophyletic mutation events...
+2020-06-02_10:14:10.501973: INFO : Combining monophyletic and mapped mutation events
+Also combining monophyletic and mapped node sequences...
+2020-06-02_10:14:18.219883: INFO : Writing node sequences to Global_L124_r2000_out_snppar_run_2/Global_L124_all_r2000_outnode_sequences.fasta
+2020-06-02_10:19:38.962031: INFO : Assigning coding consequenses to the mutation events...
+2020-06-02_10:23:37.501769: INFO : 36697 non-synonymous changes, 20768 synonymous changes, and 8200 SNP events in non-coding regions
+2020-06-02_10:23:37.504650: INFO : Parsing all mutation events...
+2020-06-02_10:23:56.324216: INFO : Found 2914 mutation events that are homoplasic
+2020-06-02_10:23:56.325826: INFO : Writing all calls at homoplasic event positions to Global_L124_r2000_out_snppar_run_2/Global_L124_all_r2000_outhomoplasic_events_all_calls.tsv
+2020-06-02_10:24:33.976546: INFO : Writing all mutation events to Global_L124_r2000_out_snppar_run_2/Global_L124_all_r2000_outall_mutation_events.tsv
+2020-06-02_10:25:33.297996: INFO : Mapping mutation events to NEXUS tree: Global_L124_r2000_out_snppar_run_2/Global_L124_all_r2000_outnode_labelled_nexus.tre
+2020-06-02_10:25:34.137408: INFO : Also mapping mutation events to Newick NHX tree: Global_L124_r2000_out_snppar_run_2/Global_L124_all_r2000_outnode_labelled_newick.tre
+2020-06-02_10:25:34.651290: INFO : Cleaning up intermediate files...
+2020-06-02_10:25:34.705767: INFO : ...Finished

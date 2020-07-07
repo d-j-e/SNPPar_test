@@ -1,0 +1,18 @@
+2020-06-02_11-51-45.682150: INFO : Log started: (Global_L124_r2000_out_snppar_run_2/no_root_run/2020-06-02_11-51-45.682150_log.txt)
+2020-06-02_11:51:45.683957: INFO : SNPPar:	Parallel SNP Finder V1.0
+	(filtering previous results)
+2020-06-02_11:51:45.684202: INFO : User command: snppar -M Global_L124_r2000_out_snppar_run_2/Global_L124_all_r2000_out_all_mutation_events_no_root.tsv -t Mtb_GL124_2000_out_c995_root.tre -d Global_L124_r2000_out_snppar_run_2/no_root_run -p run2_ -P -C -R
+2020-06-02_11:51:45.684427: INFO : Reading previous results from Global_L124_r2000_out_snppar_run_2/Global_L124_all_r2000_out_all_mutation_events_no_root.tsv
+2020-06-02_11:51:46.041322: INFO : Reading tree from Mtb_GL124_2000_out_c995_root.tre...
+2020-06-02_11:51:46.114658: INFO : Parsing all mutation events...
+2020-06-02_11:52:00.507766: INFO : Found 2879 mutation events that are homoplasic
+2020-06-02_11:52:00.508079: INFO : Writing all calls at homoplasic event positions to Global_L124_r2000_out_snppar_run_2/no_root_run/run2_homoplasic_events_all_calls.tsv
+2020-06-02_11:52:33.379815: INFO : Found 2832 mutation events that are parallel
+2020-06-02_11:52:33.380097: INFO : Writing all calls at parallel event positions to Global_L124_r2000_out_snppar_run_2/no_root_run/run2_parallel_events_all_calls.tsv
+2020-06-02_11:53:05.734204: INFO : Found 86 mutation events that are convergent
+2020-06-02_11:53:05.734459: INFO : Writing all calls at convergent event positions to Global_L124_r2000_out_snppar_run_2/no_root_run/run2_convergent_events_all_calls.tsv
+2020-06-02_11:53:06.771757: INFO : Found 77 mutation events that are revertant
+2020-06-02_11:53:06.772076: INFO : Writing all calls at revertant event positions to Global_L124_r2000_out_snppar_run_2/no_root_run/run2_revertant_events_all_calls.tsv
+2020-06-02_11:54:03.213452: INFO : Mapping mutation events to NEXUS tree: Global_L124_r2000_out_snppar_run_2/no_root_run/run2_node_labelled_nexus.tre
+2020-06-02_11:54:04.144968: INFO : Also mapping mutation events to Newick NHX tree: Global_L124_r2000_out_snppar_run_2/no_root_run/run2_node_labelled_newick.tre
+2020-06-02_11:54:04.783956: INFO : ...Selesai
