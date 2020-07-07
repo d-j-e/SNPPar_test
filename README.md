@@ -267,7 +267,7 @@ For HCMC_L2_r10p:
 
 Results for all runs are in the folder 'Step8/SNPPar_output_real'
 
-As there were only twelve runs (by.three sorting options), output data (specifically time and memory use) was collated by hand rather than code. The results file produced during testing is 'step8/Performance.txt'.
+As there were only twelve runs (by three sorting options), output data (specifically time and memory use) was collated by hand rather than code. The results file produced during testing is 'step8/Performance.txt'.
 
 # 9. Statistical analysis
 
