@@ -1,0 +1,81 @@
+---
+title: "GL124_r2000_out_analysis"
+author: "David"
+date: "07/07/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(ggforce)
+```
+
+```{r data}
+aME_gene_data <- as.data.frame(read.csv("~/Documents/GitHub/SNPPar_test/data/published_data/Mycobaceterium/allME_counts_by_gene.txt", sep = '\t', header = TRUE))
+hME_gene_data <- as.data.frame(read.csv("~/Documents/GitHub/SNPPar_test/data/published_data/Mycobaceterium/hME_counts_by_gene.txt", sep = '\t', header = TRUE))
+gene_list <- as.data.frame(read.csv("~/Documents/GitHub/SNPPar_test/data/published_data/Mycobaceterium/zero_gene_tag_list.txt", sep = '\t', header = FALSE))
+
+names(gene_list)[names(gene_list)=="V1"] <- "gene_tag"
+
+for (name in gene_list$gene_tag) {
+  if ((name %in% aME_gene_data$Gene_Tag)==FALSE) {
+    new_entry <- data.frame(Gene_Tag=name,ME=0,Syn=0,PA=0,Sites=0,Codons=0)
+    aME_gene_data <- rbind(aME_gene_data,new_entry)
+  } 
+}
+
+for (name in gene_list$gene_tag) {
+  if ((name %in% hME_gene_data$Gene_Tag)==FALSE) {
+    new_entry <- data.frame(Gene_Tag=name,ME=0,Syn=0,PA=0,Sites=0,Codons=0)
+    hME_gene_data <- rbind(hME_gene_data,new_entry)
+  } 
+}
+
+aME_gene_data <- aME_gene_data[order(as.character(aME_gene_data$Gene_Tag)),]
+hME_gene_data <- hME_gene_data[order(as.character(hME_gene_data$Gene_Tag)),]
+
+aME_gene_data$PA.aS.1 <- aME_gene_data$PA/(1+aME_gene_data$Syn)
+hME_gene_data$PA.aS.1 <- hME_gene_data$PA/(1+aME_gene_data$Syn)
+
+aME_gene_data <- aME_gene_data[order(-aME_gene_data$PA.aS.1),]
+hME_gene_data <- hME_gene_data[order(-hME_gene_data$PA.aS.1),]
+
+aME_gene_data$Type <- "All ME"
+hME_gene_data$Type <- "Homoplasic ME"
+
+print("Top Ten by PA/(S+1) - homoplasic ME")
+head(hME_gene_data,10)
+
+ahME_gene_data <- rbind(aME_gene_data,hME_gene_data) 
+
+```
+```{r graph}
+
+plotSINO_1 <- ggplot() + 
+  theme_classic() +
+  scale_color_manual(values=c("#FFAA00","#EE6600")) +
+  geom_sina(data=ahME_gene_data, aes(x=Type, y=PA.aS.1+1,colour=Type),size=1,shape=1) +
+  geom_boxplot(data=ahME_gene_data,aes(x=Type, y=PA.aS.1+1,alpha=0.1),outlier.shape = NA) +
+#  geom_point(aes(x=stats_gene_data$Type,y=stats_gene_data$mean),color="blue",shape=4,size=2) +
+  xlab("Mutation Events") +
+  ylab(label = element_blank()) +
+  ylab("PA/(S+1) +1") +
+  scale_y_log10() + 
+  theme(legend.position = "none")
+
+plotSINO_1
+
+plotAlpha2 <- ggplot() + 
+  theme_classic() +
+  geom_count(data=hME_gene_data,aes(x=Sites, y=PA.aS.1),colour="#EE6600",shape=1) +
+  xlab("Sites") +
+  ylab("PA/(S+1)") +
+  scale_y_log10() +
+  scale_x_log10()+
+  labs() 
+plotAlpha2
+
+```
+
+
