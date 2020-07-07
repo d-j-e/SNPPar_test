@@ -269,7 +269,7 @@ Results for all runs are in the folder 'Step8/SNPPar_output_real'
 
 As there were only twelve runs (by.three sorting options), output data (specifically time and memory use) was collated by hand rather than code. The results file produced during testing is 'step8/Performance.txt'.
 
-# 9. Further statistical analysis
+# 9. Statistical analysis
 
 The results files generated in Steps 7 and 8 ('homoplasic_test_results.tsv' and 'Performance.txt' respectively) were then used to analyse the results using [R](link) version xxxx in [RStudio]() version xxxxx. Both the markdown script and resulting output (in HTML format) are provided here.
 
