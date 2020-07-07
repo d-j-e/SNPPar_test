@@ -223,8 +223,8 @@ Two other files are produced for each comparison, 'incorrect_homoplasic_calls.ts
 
 For HCMC_L2_r10p run 1, these files are:
 
-  S_HCMC_L2_82_r1_incorrect_homoplasic_calls.tsv
-  S_HCMC_L2_82_r1_incorrect_homoplasic_test_calls.tsv
+    S_HCMC_L2_82_r1_incorrect_homoplasic_calls.tsv
+    S_HCMC_L2_82_r1_incorrect_homoplasic_test_calls.tsv
 
 However, as there are no errors for run 1, these are empty files.
 
@@ -271,12 +271,12 @@ As there were only twelve runs (by.three sorting options), output data (specific
 
 # 9. Further statistical analysis
 
-The results files generated in Steps 7 and 8 ('homoplasic_test_results.tsv' and 'Performance.txt' respectively) were then used to analyse the results using [R](link) version xxxx in [RStudio]() version xxxxx. Both the markdown script and output (in html format) are provided here.
+The results files generated in Steps 7 and 8 ('homoplasic_test_results.tsv' and 'Performance.txt' respectively) were then used to analyse the results using [R](link) version xxxx in [RStudio]() version xxxxx. Both the markdown script and resulting output (in HTML format) are provided here.
 
 ### R-markdown script and output
 
-  xxxx
-  xxxx
+    xxxx
+    xxxx
 
 # 10. Published Datasets
 
