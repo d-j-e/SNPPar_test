@@ -271,7 +271,11 @@ As there were only twelve runs (by.three sorting options), output data (specific
 
 # 9. Further statistical analysis
 
-### R-markdown script
+The results files generated in Steps 7 and 8 ('homoplasic_test_results.tsv' and 'Performance.txt' respectively) were then used to analyse the results using R
+
+### R-markdown script and output
+
+
 
 # 10. Published Datasets
 
