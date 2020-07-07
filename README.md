@@ -342,11 +342,17 @@ NC_00962_3_1.gbk
 
 ### SNPtable:
 
-
+Global_L124_r2000_out_NC_000962_alleles_2001strains_regionFiltered_cons0.995_var_hardFiltered.csv (Note: this needs decompressing before use)
 
 ### Tree:
 
-### Command:
+Mtb_GL124_2000_out_c995_root.tre
+
+### Commands:
+
+snppar -s Global_L124_r2000_out_NC_000962_alleles_2001strains_regionFiltered_cons0.995_var_hardFiltered.csv -g NC_00962_3_1.gbk -t Mtb_GL124_2000_out_c995_root.tre -d snppar_output -p Global_L124_all_r2000_out
+
+snppar -M Global_L124_all_r2000_out_all_mutation_events_no_root.tsv -t Mtb_GL124_2000_out_c995_root.tre -d snppar_output/no_root_run -p run2_ -P -C -R
 
 ### Notes:
 
