@@ -286,23 +286,53 @@ Note: if you want to run the RMD script, make sure to change the paths to the tw
 
 ### Reference genome:
 
+CP014805v2.gbk
+
 ### SNPtable:
+
+CP014805v2_CP014805_alleles_1outgroup_69strains_var_regionFiltered_cons0.95_var.csv
 
 ### Tree:
 
+final_raxml_tree_no_recomb.tree
+
 ### Command:
 
+snppar -s CP014805v2_CP014805_alleles_1outgroup_69strains_var_regionFiltered_cons0.95_var.csv -t final_raxml_tree_no_recomb.tree -g CP014805v2.gbk -d snppar_output
+
 ### Post-run analysis:
+
+Final tree: elizabethkingia_node_labelled_nexus_CSID.tre
 
 ## 10.2 _Burkholderia dolosa_
 
 ### Reference genomes:
 
-### SNPtable:
+AU0158_ch1.gb
+
+AU0158_ch2.gb
+
+AU0158_ch3.gb
+
+### SNPtables:
+
+NIHMS335194-supplement-2-alleles_chr1.csv
+
+NIHMS335194-supplement-2-alleles_chr1.csv
+
+NIHMS335194-supplement-2-alleles_chr1.csv
 
 ### Tree:
 
+lieberman2011natgen_ss_root.newick
+
 ### Commands:
+
+snppar -s NIHMS335194-supplement-2-alleles_chr1.csv -t lieberman2011natgen_ss_root.newick -g AU0158_ch1.gb -d snppar_output -p chr1_
+
+snppar -s NIHMS335194-supplement-2-alleles_chr2.csv -t lieberman2011natgen_ss_root.newick -g AU0158_ch2.gb -d snppar_output -p chr2_
+
+snppar -s NIHMS335194-supplement-2-alleles_chr3.csv -t lieberman2011natgen_ss_root.newick -g AU0158_ch3.gb -d snppar_output -p chr3_
 
 ### Post-run analysis:
 

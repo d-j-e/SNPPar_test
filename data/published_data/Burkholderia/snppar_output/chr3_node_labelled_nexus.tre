@@ -1,0 +1,240 @@
+#NEXUS
+Begin taxa;
+	Dimensions ntax=114;
+	Taxlabels
+		X-3-7
+		A-0-0
+		A-5-0b
+		AU0158
+		A-4-2b
+		A-5-0a
+		A-4-2a
+		M-12-6
+		M-11-5
+		M-9-4
+		M-10-6
+		E-6-1
+		F-6-11
+		G-7-5
+		G-9-8
+		G-10-0b
+		G-9-11a
+		G-10-3
+		G-9-11c
+		G-10-0a
+		G-10-6
+		G-10-2
+		G-10-1c-$
+		G-10-1b
+		G-10-11b
+		G-10-0c
+		G-9-11b
+		C-4-11
+		C-8-0
+		B-4-11
+		B-9-1
+		D-7-10
+		C-12-1
+		B-11-1
+		B-7-1
+		E-8-4
+		E-9-5
+		E-13-0
+		E-12-1
+		C-10-0
+		K-10-7
+		K-9-0
+		K-10-0
+		K-10-10
+		K-12-5
+		K-12-8a-$
+		K-11-6
+		K-12-0a
+		K-11-3b
+		K-12-9-$
+		K-12-0b
+		K-10-2
+		K-10-1
+		K-10-3a
+		K-11-3a
+		F-7-0a-$
+		F-6-9
+		I-9-6
+		I-8-7
+		H-12-10
+		H-10-6a
+		H-9-11
+		H-8-3
+		H-10-6b
+		L-10-6
+		L-10-2
+		L-11-11
+		L-13-4a-$
+		L-13-0
+		L-11-6
+		L-12-7
+		L-10-10
+		L-12-3
+		L-10-1
+		L-9-11
+		L-16-0
+		L-13-7
+		L-11-8
+		L-11-3
+		N-12-6d-$
+		N-10-5
+		N-12-4a
+		N-12-1
+		N-12-6c
+		N-12-6a
+		N-12-4c-$
+		N-12-5-$
+		N-12-6b
+		N-11-9
+		N-11-7
+		N-10-0
+		N-11-3
+		N-11-2
+		N-10-11
+		N-10-8
+		N-10-1
+		H-10-1
+		H-9-10
+		H-12-7
+		H-9-5
+		H-11-3
+		H-10-10
+		H-13-0b-$
+		H-12-11a-$
+		J-9-11
+		J-11-8
+		J-11-11
+		J-12-7
+		J-13-6a-$
+		J-12-11
+		J-14-2
+		J-13-6b
+		J-14-8
+		J-12-4
+		;
+End;
+
+Begin trees;
+	Translate
+		1 X-3-7,
+		2 A-0-0,
+		3 A-5-0b,
+		4 AU0158,
+		5 A-4-2b,
+		6 A-5-0a,
+		7 A-4-2a,
+		8 M-12-6,
+		9 M-11-5,
+		10 M-9-4,
+		11 M-10-6,
+		12 E-6-1,
+		13 F-6-11,
+		14 G-7-5,
+		15 G-9-8,
+		16 G-10-0b,
+		17 G-9-11a,
+		18 G-10-3,
+		19 G-9-11c,
+		20 G-10-0a,
+		21 G-10-6,
+		22 G-10-2,
+		23 G-10-1c-$,
+		24 G-10-1b,
+		25 G-10-11b,
+		26 G-10-0c,
+		27 G-9-11b,
+		28 C-4-11,
+		29 C-8-0,
+		30 B-4-11,
+		31 B-9-1,
+		32 D-7-10,
+		33 C-12-1,
+		34 B-11-1,
+		35 B-7-1,
+		36 E-8-4,
+		37 E-9-5,
+		38 E-13-0,
+		39 E-12-1,
+		40 C-10-0,
+		41 K-10-7,
+		42 K-9-0,
+		43 K-10-0,
+		44 K-10-10,
+		45 K-12-5,
+		46 K-12-8a-$,
+		47 K-11-6,
+		48 K-12-0a,
+		49 K-11-3b,
+		50 K-12-9-$,
+		51 K-12-0b,
+		52 K-10-2,
+		53 K-10-1,
+		54 K-10-3a,
+		55 K-11-3a,
+		56 F-7-0a-$,
+		57 F-6-9,
+		58 I-9-6,
+		59 I-8-7,
+		60 H-12-10,
+		61 H-10-6a,
+		62 H-9-11,
+		63 H-8-3,
+		64 H-10-6b,
+		65 L-10-6,
+		66 L-10-2,
+		67 L-11-11,
+		68 L-13-4a-$,
+		69 L-13-0,
+		70 L-11-6,
+		71 L-12-7,
+		72 L-10-10,
+		73 L-12-3,
+		74 L-10-1,
+		75 L-9-11,
+		76 L-16-0,
+		77 L-13-7,
+		78 L-11-8,
+		79 L-11-3,
+		80 N-12-6d-$,
+		81 N-10-5,
+		82 N-12-4a,
+		83 N-12-1,
+		84 N-12-6c,
+		85 N-12-6a,
+		86 N-12-4c-$,
+		87 N-12-5-$,
+		88 N-12-6b,
+		89 N-11-9,
+		90 N-11-7,
+		91 N-10-0,
+		92 N-11-3,
+		93 N-11-2,
+		94 N-10-11,
+		95 N-10-8,
+		96 N-10-1,
+		97 H-10-1,
+		98 H-9-10,
+		99 H-12-7,
+		100 H-9-5,
+		101 H-11-3,
+		102 H-10-10,
+		103 H-13-0b-$,
+		104 H-12-11a-$,
+		105 J-9-11,
+		106 J-11-8,
+		107 J-11-11,
+		108 J-12-7,
+		109 J-13-6a-$,
+		110 J-12-11,
+		111 J-14-2,
+		112 J-13-6b,
+		113 J-14-8,
+		114 J-12-4
+		;
+tree TREE1 = [&R] (1[&total=2,homoplasic=0]:1.71329e-06,(2[&total=1,homoplasic=0]:1.86904e-06,((3[&total=0,homoplasic=0]:1.09027e-06,(4[&total=0,homoplasic=0]:0,(5[&total=0,homoplasic=0]:7.78768e-07,(6[&total=0,homoplasic=0]:7.78768e-07,7[&total=1,homoplasic=1]:3.11507e-07)N7[&total=0,homoplasic=0]:0)N6[&total=0,homoplasic=0]:4.67261e-07)N5[&total=0,homoplasic=0]:1.55754e-07)N4[&total=1,homoplasic=0]:1.86904e-06,((8[&total=0,homoplasic=0]:6.23014e-07,(9[&total=1,homoplasic=0]:6.23014e-07,(10[&total=0,homoplasic=0]:0,11[&total=1,homoplasic=0]:0)N11[&total=0,homoplasic=0]:0)N10[&total=1,homoplasic=0]:0)N9[&total=1,homoplasic=0]:3.27082e-06,((12[&total=0,homoplasic=0]:0,(13[&total=0,homoplasic=0]:9.34521e-07,(14[&total=0,homoplasic=0]:6.23014e-07,(15[&total=1,homoplasic=0]:1.40178e-06,((16[&total=0,homoplasic=0]:0,17[&total=0,homoplasic=0]:0)N18[&total=0,homoplasic=0]:6.23014e-07,(18[&total=0,homoplasic=0]:4.67261e-07,(19[&total=0,homoplasic=0]:1.55754e-07,(20[&total=0,homoplasic=0]:0,(21[&total=0,homoplasic=0]:0,(22[&total=0,homoplasic=0]:0,(23[&total=0,homoplasic=0]:0,(24[&total=0,homoplasic=0]:0,(25[&total=1,homoplasic=0]:4.67261e-07,(26[&total=0,homoplasic=0]:0,27[&total=0,homoplasic=0]:0)N27[&total=0,homoplasic=0]:0)N26[&total=0,homoplasic=0]:0)N25[&total=0,homoplasic=0]:0)N24[&total=0,homoplasic=0]:0)N23[&total=0,homoplasic=0]:0)N22[&total=0,homoplasic=0]:0)N21[&total=0,homoplasic=0]:6.23014e-07)N20[&total=0,homoplasic=0]:0)N19[&total=0,homoplasic=0]:6.23014e-07)N17[&total=0,homoplasic=0]:3.11507e-07)N16[&total=0,homoplasic=0]:3.11507e-07)N15[&total=0,homoplasic=0]:1.55754e-07)N14[&total=1,homoplasic=0]:6.23014e-07)N13[&total=2,homoplasic=0]:6.23014e-07,(28[&total=0,homoplasic=0]:0,(29[&total=0,homoplasic=0]:7.78768e-07,(30[&total=0,homoplasic=0]:0,(31[&total=1,homoplasic=0]:7.78768e-07,((32[&total=0,homoplasic=0]:1.24603e-06,(33[&total=0,homoplasic=0]:1.71329e-06,(34[&total=1,homoplasic=0]:1.40178e-06,35[&total=0,homoplasic=0]:1.55754e-07)N35[&total=0,homoplasic=0]:1.55754e-07)N34[&total=0,homoplasic=0]:4.67261e-07)N33[&total=0,homoplasic=0]:1.55754e-07,((36[&total=0,homoplasic=0]:4.67261e-07,(37[&total=1,homoplasic=0]:6.23014e-07,(38[&total=0,homoplasic=0]:3.11507e-07,39[&total=1,homoplasic=0]:6.23014e-07)N39[&total=1,homoplasic=0]:1.24603e-06)N38[&total=1,homoplasic=0]:4.67261e-07)N37[&total=1,homoplasic=1]:1.09027e-06,((40[&total=0,homoplasic=0]:1.09027e-06,((41[&total=1,homoplasic=0]:4.67261e-07,(42[&total=0,homoplasic=0]:0,((43[&total=0,homoplasic=0]:3.11507e-07,44[&total=0,homoplasic=0]:3.11507e-07)N46[&total=0,homoplasic=0]:0,(45[&total=0,homoplasic=0]:1.55754e-07,(46[&total=1,homoplasic=0]:6.23014e-07,47[&total=0,homoplasic=0]:0)N48[&total=0,homoplasic=0]:1.55754e-07)N47[&total=1,homoplasic=0]:4.67261e-07)N45[&total=0,homoplasic=0]:4.67261e-07)N44[&total=0,homoplasic=0]:0)N43[&total=0,homoplasic=0]:0,(48[&total=0,homoplasic=0]:1.55754e-06,((49[&total=0,homoplasic=0]:7.78768e-07,(50[&total=0,homoplasic=0]:1.24603e-06,51[&total=2,homoplasic=0]:1.09027e-06)N52[&total=0,homoplasic=0]:1.55754e-07)N51[&total=0,homoplasic=0]:1.55754e-07,(52[&total=0,homoplasic=0]:4.67261e-07,(53[&total=0,homoplasic=0]:1.55754e-07,(54[&total=0,homoplasic=0]:0,55[&total=0,homoplasic=0]:1.55754e-07)N55[&total=0,homoplasic=0]:0)N54[&total=0,homoplasic=0]:3.11507e-07)N53[&total=0,homoplasic=0]:0)N50[&total=0,homoplasic=0]:0)N49[&total=0,homoplasic=0]:1.55754e-07)N42[&total=0,homoplasic=0]:1.55754e-07)N41[&total=0,homoplasic=0]:1.24603e-06,((56[&total=1,homoplasic=0]:9.34521e-07,(57[&total=1,homoplasic=0]:6.23014e-07,(58[&total=1,homoplasic=0]:1.40178e-06,59[&total=0,homoplasic=0]:1.55754e-07)N59[&total=1,homoplasic=0]:7.78768e-07)N58[&total=0,homoplasic=0]:0)N57[&total=0,homoplasic=0]:0,((60[&total=1,homoplasic=0]:1.24603e-06,(61[&total=2,homoplasic=0]:6.23014e-07,62[&total=0,homoplasic=0]:0)N62[&total=1,homoplasic=0]:1.55754e-07)N61[&total=0,homoplasic=0]:1.55754e-07,(63[&total=0,homoplasic=0]:0,(64[&total=1,homoplasic=0]:4.67261e-07,(((65[&total=0,homoplasic=0]:4.67261e-07,66[&total=0,homoplasic=0]:1.55754e-07)N67[&total=0,homoplasic=0]:1.55754e-07,((67[&total=0,homoplasic=0]:4.67261e-07,68[&total=2,homoplasic=0]:1.55754e-06)N69[&total=0,homoplasic=0]:1.55754e-07,(69[&total=0,homoplasic=0]:1.09027e-06,(70[&total=0,homoplasic=0]:1.55754e-07,(71[&total=1,homoplasic=0]:9.34521e-07,(72[&total=0,homoplasic=0]:1.55754e-07,(73[&total=0,homoplasic=0]:1.09027e-06,(74[&total=0,homoplasic=0]:1.55754e-07,(75[&total=0,homoplasic=0]:0,((76[&total=1,homoplasic=0]:6.23014e-07,77[&total=0,homoplasic=0]:1.55754e-07)N78[&total=1,homoplasic=0]:1.86904e-06,(78[&total=0,homoplasic=0]:3.11507e-07,79[&total=0,homoplasic=0]:1.55754e-07)N79[&total=2,homoplasic=0]:7.78768e-07)N77[&total=1,homoplasic=0]:3.11507e-07)N76[&total=0,homoplasic=0]:0)N75[&total=0,homoplasic=0]:0)N74[&total=0,homoplasic=0]:0)N73[&total=0,homoplasic=0]:0)N72[&total=0,homoplasic=0]:0)N71[&total=0,homoplasic=0]:0)N70[&total=0,homoplasic=0]:0)N68[&total=0,homoplasic=0]:0)N66[&total=0,homoplasic=0]:3.11507e-07,((80[&total=0,homoplasic=0]:6.23014e-07,(81[&total=0,homoplasic=0]:4.67261e-07,((82[&total=0,homoplasic=0]:3.11507e-07,83[&total=0,homoplasic=0]:6.23014e-07)N84[&total=0,homoplasic=0]:1.55754e-07,(((84[&total=0,homoplasic=0]:1.55754e-07,85[&total=0,homoplasic=0]:1.55754e-07)N87[&total=0,homoplasic=0]:4.67261e-07,(86[&total=1,homoplasic=0]:3.11507e-07,(87[&total=1,homoplasic=0]:3.11507e-07,(88[&total=0,homoplasic=0]:4.67261e-07,89[&total=0,homoplasic=0]:0)N90[&total=0,homoplasic=0]:0)N89[&total=0,homoplasic=0]:0)N88[&total=0,homoplasic=0]:3.11507e-07)N86[&total=1,homoplasic=0]:4.67261e-07,(90[&total=0,homoplasic=0]:1.55754e-07,(91[&total=0,homoplasic=0]:0,(92[&total=0,homoplasic=0]:0,(93[&total=0,homoplasic=0]:1.55754e-07,(94[&total=0,homoplasic=0]:4.67261e-07,(95[&total=0,homoplasic=0]:0,96[&total=0,homoplasic=0]:0)N96[&total=0,homoplasic=0]:0)N95[&total=0,homoplasic=0]:0)N94[&total=0,homoplasic=0]:0)N93[&total=0,homoplasic=0]:0)N92[&total=0,homoplasic=0]:0)N91[&total=0,homoplasic=0]:0)N85[&total=0,homoplasic=0]:0)N83[&total=0,homoplasic=0]:0)N82[&total=0,homoplasic=0]:0)N81[&total=0,homoplasic=0]:4.67261e-07,((97[&total=0,homoplasic=0]:1.55754e-07,98[&total=0,homoplasic=0]:1.55754e-07)N98[&total=0,homoplasic=0]:6.23014e-07,((99[&total=2,homoplasic=0]:1.40178e-06,(100[&total=0,homoplasic=0]:0,(101[&total=1,homoplasic=0]:1.24603e-06,(102[&total=0,homoplasic=0]:1.55754e-07,(103[&total=1,homoplasic=0]:9.34521e-07,104[&total=1,homoplasic=0]:9.34521e-07)N104[&total=0,homoplasic=0]:3.11507e-07)N103[&total=0,homoplasic=0]:6.23014e-07)N102[&total=0,homoplasic=0]:0)N101[&total=0,homoplasic=0]:0)N100[&total=0,homoplasic=0]:3.11507e-07,(105[&total=0,homoplasic=0]:3.11507e-07,(106[&total=1,homoplasic=0]:7.78768e-07,(107[&total=0,homoplasic=0]:1.55754e-07,(108[&total=1,homoplasic=0]:3.11507e-07,(109[&total=0,homoplasic=0]:3.11507e-07,(110[&total=0,homoplasic=0]:1.55754e-07,(111[&total=0,homoplasic=0]:3.11507e-07,(112[&total=0,homoplasic=0]:6.23014e-07,(113[&total=3,homoplasic=0]:7.78768e-07,114[&total=0,homoplasic=0]:0)N113[&total=0,homoplasic=0]:0)N112[&total=0,homoplasic=0]:0)N111[&total=0,homoplasic=0]:0)N110[&total=0,homoplasic=0]:1.55754e-07)N109[&total=0,homoplasic=0]:6.23014e-07)N108[&total=0,homoplasic=0]:0)N107[&total=1,homoplasic=1]:1.55754e-07)N106[&total=0,homoplasic=0]:1.09027e-06)N105[&total=0,homoplasic=0]:3.11507e-07)N99[&total=0,homoplasic=0]:0)N97[&total=0,homoplasic=0]:0)N80[&total=0,homoplasic=0]:0)N65[&total=0,homoplasic=0]:0)N64[&total=0,homoplasic=0]:0)N63[&total=0,homoplasic=0]:0)N60[&total=0,homoplasic=0]:7.78768e-07)N56[&total=0,homoplasic=0]:7.78768e-07)N40[&total=0,homoplasic=0]:0)N36[&total=0,homoplasic=0]:0)N32[&total=0,homoplasic=0]:0)N31[&total=0,homoplasic=0]:0)N30[&total=0,homoplasic=0]:0)N29[&total=0,homoplasic=0]:0)N28[&total=0,homoplasic=0]:0)N12[&total=1,homoplasic=0]:7.78768e-07)N8[&total=3,homoplasic=1]:1.55754e-06)N3[&total=0,homoplasic=0]:1.09027e-06)N2[&total=1,homoplasic=0]:1.71329e-06)N1[&total=0,homoplasic=0];
+End;

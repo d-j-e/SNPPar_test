@@ -1,0 +1,79 @@
+2019-10-17_11-39-18.250934: INFO : Log started: (Bdol_real_tree_ss_test/2019-10-17_11-39-18.250934_log.txt)
+2019-10-17_11:39:18.251474: INFO : SNPPar:	Parallel SNP Finder V0.1.2dev
+	(utilising TreeTime for ASR)
+2019-10-17_11:39:18.252321: INFO : User command: snppar -s NIHMS335194-supplement-2-alleles_chr3.csv -t lieberman2011natgen_ss_root.newick -g AU0158_ch3.gb -d Bdol_real_tree_ss_test -p chr3_
+2019-10-17_11:39:18.252564: INFO : Reading SNP table from NIHMS335194-supplement-2-alleles_chr3.csv
+2019-10-17_11:39:18.256243: INFO : Finished reading 59 SNPs in total
+...keeping 59 variable SNPs and ignoring 0 SNPs
+that are non-variable among the 114 isolates
+2019-10-17_11:39:18.256494: INFO : Reading Genbank file from AU0158_ch3.gb
+2019-10-17_11:39:18.344579: INFO : Found 538 genes
+2019-10-17_11:39:18.345217: INFO : Reading tree from lieberman2011natgen_ss_root.newick...
+2019-10-17_11:39:18.351254: INFO : Tree and SNP table have same isolates
+2019-10-17_11:39:18.351731: INFO : Parsing SNPs to find bi-, tri- and quadallelic SNPs...
+Also testing if biallelic SNPs are homoplasic
+2019-10-17_11:39:18.693354: INFO : Biallelic SNPs (>1 one isolate): 21
+Biallelic SNP patterns tested: 20
+Paraphyletic SNPs found: 2
+Triallelic SNPs found: 0
+Quadallelic SNPs found: 0
+
+Total SNPs for mapping: 2
+2019-10-17_11:39:18.693846: INFO : Assigning monophyletic SNPs to genes
+2019-10-17_11:39:18.695429: INFO : Of the 57 monophyletic SNPs for testing, 25 are intergenic, and 32 are intragenic
+2019-10-17_11:39:18.696045: INFO : Assigning SNPs to map to genes
+2019-10-17_11:39:18.697105: INFO : Of the 2 SNPs to map for testing, 1 are intergenic, and 1 are intragenic
+2019-10-17_11:39:18.698138: INFO : Running TreeTime: treetime ancestral --aln Bdol_real_tree_ss_test/chr3_snps_to_map.mfasta --tree lieberman2011natgen_ss_root.newick --outdir Bdol_real_tree_ss_test/treetime_out/ --report-ambiguous --verbose 2
+2019-10-17_11:39:20.178355: INFO : stdout: 
+0.00	-TreeAnc: set-up
+
+Inferred GTR model:
+Substitution rate (mu): 1.0
+
+Equilibrium frequencies (pi_i):
+  A: 0.2648
+  C: 0.2497
+  G: 0.2522
+  T: 0.2212
+  -: 0.0121
+
+Symmetrized rates from j->i (W_ij):
+	A	C	G	T	-
+  A	0	1.4876	1.2373	1.2404	1.2404
+  C	1.4876	0	1.4877	1.2425	1.2425
+  G	1.2373	1.4877	0	1.2405	1.2405
+  T	1.2404	1.2425	1.2405	0	1.2429
+  -	1.2404	1.2425	1.2405	1.2429	0
+
+Actual rates from j->i (Q_ij):
+	A	C	G	T	-
+  A	0	0.394	0.3277	0.3285	0.3285
+  C	0.3714	0	0.3715	0.3102	0.3102
+  G	0.312	0.3751	0	0.3128	0.3128
+  T	0.2744	0.2748	0.2744	0	0.2749
+  -	0.015	0.015	0.015	0.015	0
+
+
+--- alignment including ancestral nodes saved as  
+	 Bdol_real_tree_ss_test/treetime_out/ancestral_sequences.fasta
+
+--- tree saved in nexus format as  
+	 Bdol_real_tree_ss_test/treetime_out/annotated_tree.nexus
+
+2019-10-17_11:39:20.178892: INFO : Extracting mutation events from ASR results...
+2019-10-17_11:39:20.182503: INFO : Extracting internal node sequences from ASR results...
+2019-10-17_11:39:20.184386: INFO : Processing mapped mutation events...
+2019-10-17_11:39:20.184705: INFO : Processing monophyletic mutation events...
+2019-10-17_11:39:20.216535: INFO : Combining monophyletic and mapped mutation events
+Also combining monophyletic and mapped node sequences...
+2019-10-17_11:39:20.217211: INFO : Writing node sequences to Bdol_real_tree_ss_test/chr3_node_sequences.fasta
+2019-10-17_11:39:20.219612: INFO : Assigning coding consequenses to the mutation events...
+2019-10-17_11:39:20.222794: INFO : 28 non-synonymous changes, 6 synonymous changes, and 27 SNP events in non-coding regions
+2019-10-17_11:39:20.223191: INFO : Parsing all mutation events...
+2019-10-17_11:39:20.224093: INFO : Found 4 mutation events that are homoplasic
+2019-10-17_11:39:20.224475: INFO : Writing all calls at homoplasic event positions to Bdol_real_tree_ss_test/chr3_homoplasic_events_all_calls.tsv
+2019-10-17_11:39:20.225206: INFO : Writing all mutation events to Bdol_real_tree_ss_test/chr3_all_mutation_events.tsv
+2019-10-17_11:39:20.232464: INFO : Mapping mutation events to NEXUS tree: Bdol_real_tree_ss_test/chr3_node_labelled_nexus.tre
+2019-10-17_11:39:20.238648: INFO : Also mapping mutation events to Newick NHX tree: Bdol_real_tree_ss_test/chr3_node_labelled_newick.tre
+2019-10-17_11:39:20.243927: INFO : Cleaning up intermediate files...
+2019-10-17_11:39:20.257961: INFO : ...Terminado

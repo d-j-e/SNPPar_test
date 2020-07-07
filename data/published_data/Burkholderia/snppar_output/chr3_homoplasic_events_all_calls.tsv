@@ -1,0 +1,5 @@
+Position	Type	Ancestor_Node	Derived_Node	Ancestor_Call	Derived_Call	Gene	Strand	Codon	Codon_Position	Ancestor_Codon	Derived_Codon	Ancestor_A.A.	Derived_A.A.	Change	Up_Gene	Up_Gene_Strand	Up_Gene_Distance	Down_Gene	Down_Gene_Strand	Down_Gene_Distance
+70968	intragenic	N36	N37	G	C	BDAG_04506	-1	209	1	CAC	GAC	H	D	NS	-	-	-	-	-	-
+70968	intragenic	N106	N107	G	C	BDAG_04506	-1	209	1	CAC	GAC	H	D	NS	-	-	-	-	-	-
+72093	intergenic	N7	A-4-2a	C	A	-	-	-	-	-	-	-	-	-	BDAG_04506	-1	501	BDAG_04507	1	127
+72093	intergenic	N3	N8	C	A	-	-	-	-	-	-	-	-	-	BDAG_04506	-1	501	BDAG_04507	1	127
