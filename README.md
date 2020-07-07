@@ -348,6 +348,10 @@ NC_00962_3_1.gbk
 
 ### Command:
 
+### Notes:
+
+
+
 ### Post-run analysis:
 
 ### R-markdown script:
