@@ -255,7 +255,19 @@ The last two 'errors' (881703 and 2316301) are not actual errors, but are called
 
 # 8. Run empirical data with SNPPar
 
+The twelve empirical datasets used to generate the phylogenetic trees in Step 4 above were also subject to performance analysis for computational resources. As these datasets include missing calls, all three sorting options were tested, 'intermediate' (default), 'simple' ('-E S' option in SNPPar) and 'complex' ('-E C' option).
 
+Otherwise, the command used for the SNPPar test runs was exactly the same as for the simulated datasets, i.e.:
+
+/usr/bin/time -lp snppar -g NC_00962_3_1.gbk -d [output_directory] -t [tree] -s [alleles.csv]
+
+For HCMC_L2_r10p:
+
+/usr/bin/time -lp snppar -g NC_00962_3_1.gbk -d real_out/HCMC_L2_r10p -t HCMC_L2_r10p.tre -s HCMC_L2_r10p_alleles_82strains_var_rF_c95.csv
+
+Results for all runs are in the folder 'Step8/SNPPar_output_real'
+
+As there were only twelve runs (by.three sorting options), output data (specifically time and memory use) was collated by hand rather than code. The results file produced during testing is 'step8/Performance.txt'.
 
 # 9. Further statistical analysis
 
