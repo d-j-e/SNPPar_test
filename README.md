@@ -308,19 +308,15 @@ Final tree: elizabethkingia_node_labelled_nexus_CSID.tre
 
 ### Reference genomes:
 
-AU0158_ch1.gb
-
-AU0158_ch2.gb
-
-AU0158_ch3.gb
+    AU0158_ch1.gb
+    AU0158_ch2.gb
+    AU0158_ch3.gb
 
 ### SNPtables:
 
-NIHMS335194-supplement-2-alleles_chr1.csv
-
-NIHMS335194-supplement-2-alleles_chr1.csv
-
-NIHMS335194-supplement-2-alleles_chr1.csv
+    NIHMS335194-supplement-2-alleles_chr1.csv
+    NIHMS335194-supplement-2-alleles_chr1.csv
+    NIHMS335194-supplement-2-alleles_chr1.csv
 
 ### Tree:
 
@@ -336,11 +332,17 @@ snppar -s NIHMS335194-supplement-2-alleles_chr3.csv -t lieberman2011natgen_ss_ro
 
 ### Post-run analysis:
 
+
+
 ## 10.3 _Mycobacterium tuberculosis_
 
 ### Reference genome:
 
+NC_00962_3_1.gbk
+
 ### SNPtable:
+
+
 
 ### Tree:
 
