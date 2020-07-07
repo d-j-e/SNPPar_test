@@ -1,0 +1,121 @@
+---
+title: "SNPPar performance"
+author: "David Edwards"
+date: "07/07/2020"
+output:
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(scales)
+library(naniar)
+library(varhandle)
+require(ggiraph)
+require(ggiraphExtra)
+require(plyr)
+library(gridExtra)
+library(ape)
+library(survival)
+library(reshape2)
+```
+
+```{r data}
+
+real_data <- as.data.frame(read.csv("~/Documents/GitHub/SNPPar_test/data/Step8/Performance.txt", sep = '\t', header = TRUE))
+real_data$Length <- real_data$Sample_Size * real_data$SNPs
+real_data$Time <- real_data$Time/60
+real_data$Memory <- real_data$Memory/1024/1024
+
+sim_data <- as.data.frame(read.csv("~/Documents/GitHub/SNPPar_test/data/Step7/homoplasic_test_results.tsv", sep = '\t', header = TRUE))
+sim_data$Length <- sim_data$Sample_Size * sim_data$SNP_Calls
+
+# ANOVA results 
+fit_time_length <- lm(sim_data$Time~sim_data$Length*sim_data$Sorting)
+
+anova(fit_time_length)
+
+fit_memory_SNPs <- lm(sim_data$Memory~sim_data$SNP_Calls*sim_data$Sorting)
+
+anova(fit_memory_SNPs)
+
+```
+```{r plots}
+# Figure 5 in text
+plotA <- ggplot() + 
+  theme_linedraw() +
+  scale_color_manual(values=c("#F5793A", "#A95AA1", "#85C0F9"),labels = c("Complex", "Intermediate", "Simple")) +
+  geom_point(data=sim_data, aes(Length,Time, color = Sorting),size = 2,shape=1) +
+  geom_point(data=real_data, aes(Length,Time, color = Sorting),size = 2,shape=2) +
+  geom_smooth(data=sim_data, aes(Length,Time, color = Sorting),method = "lm", formula = y ~ poly(x, 1, raw=TRUE),na.rm=TRUE,linetype=1,size=0.3,level=0.9) +
+  geom_line(data=real_data, aes(Length,Time, color = Sorting),na.rm=TRUE,size=0.3,linetype = "dashed") +
+  labs(title="A. Run Time") +
+  annotate(geom="text", x=1e08, y=25, label="y = 4.2 + 83.5.x",size= 4) +
+  annotate(geom="text", x=1.1e08, y=18, label="y = 3.7 + 73.5.x",size = 4) +
+  ylab("Run time (Minutes)") +
+  xlab("Total Alignment (Isolates X SNPs)") +
+  guides(color=guide_legend(override.aes=list(fill=NA)))+
+  scale_x_continuous(label = comma)
+
+plotA
+
+plotB <- ggplot() + 
+  theme_linedraw() +
+  scale_color_manual(values=c("#F5793A", "#A95AA1", "#85C0F9"),labels = c("Complex", "Intermediate", "Simple")) +
+  geom_point(data=sim_data, aes(SNP_Calls,Memory, color = Sorting),size = 2,shape=1) +
+  geom_point(data=real_data, aes(SNPs,Memory, color = Sorting),size = 2,shape=2) +
+  geom_smooth(data=sim_data[sim_data$Sorting=="I",], aes(SNP_Calls,Memory, color = Sorting),method = "lm", formula = y ~ poly(x, 2, raw=TRUE),na.rm=TRUE,linetype=1,size=0.3,level=0.9) +
+  geom_smooth(data=sim_data[sim_data$Sorting=="S",], aes(SNP_Calls,Memory, color = Sorting),method = "lm", formula = y ~ poly(x, 3, raw=TRUE),na.rm=TRUE,linetype=1,size=0.3,level=0.9) +
+  annotate(geom="text", x=40000, y=4800, label="y = 1286 + 17156.x + 1494.x^2 - 2097.x^3",size= 4) +
+  annotate(geom="text", x=43000, y=650, label="y = 518 + 7546.x + 2550.x^2",size = 4) +
+  geom_line(data=real_data, aes(SNPs,Memory, color = Sorting),size=0.3,linetype = "dashed") +
+  labs(title = "B. Memory Use") +
+  ylab("Peak Memory Use (Megabytes)") +
+  xlab("SNPs") +
+  guides(color=guide_legend(override.aes=list(fill=NA))) +
+  scale_x_continuous(label = comma) +
+  scale_y_continuous(label = comma)
+
+
+plotB
+```
+
+```{r accuracy}
+# Supplementary Figure S2
+sim_data$correct <- sim_data$correct_calls/(sim_data$correct_calls+sim_data$incorrect_calls)*100
+sim_data$incorrect <- sim_data$incorrect_calls/(sim_data$correct_calls+sim_data$incorrect_calls)*100
+
+p1 <- ggplot(sim_data[sim_data$Sorting=="I",], aes(x = Sample_Size, y = incorrect, color = Population, fill = Population)) + 
+#  scale_color_manual(values = three_colours) +
+#  geom_boxplot(outlier.shape=NA,fill = 'grey') +
+  scale_color_manual(values=c("#F5793A", "#A95AA1", "#85C0F9", "#0F2080")) +
+  geom_jitter(height = 0, width = 30,size=1, shape = 1) +
+  stat_summary(fun.y=mean, geom="line", aes(group=1))  + 
+  stat_summary(fun.y=mean, geom="point",colour = 'black',shape=18) +
+  stat_summary(fun.data=mean_se, geom="errorbar",colour = 'black',width=50) +
+  ylab("Incorrect type calls (% of total calls)") +
+  xlab("Sample Size") +
+  labs(tag="A") +
+  theme_linedraw() +
+  theme(legend.position = "none") +
+  facet_wrap (~ Population, nrow=3)
+
+sim_data.melt <- melt(sim_data, c("Population","Sample_Size"), c("single_call_incorrect_RP","single_call_incorrect_PR"))
+
+p2 <- ggplot(sim_data.melt,aes(x=Sample_Size, y=value, color=variable)) +
+  scale_color_manual(values=c("#CA3542", "#276478")) +
+  geom_jitter(height = 0, width = 30,size=1, shape = 2) +
+  stat_summary(fun.y=mean, geom="line", aes(group=variable))  + 
+  stat_summary(fun.y=mean, geom="point",colour = 'black',shape=18, aes(group=variable)) +
+  stat_summary(fun.data=mean_se, geom="errorbar",colour = 'black',width=50, aes(group=variable)) +
+  ylab("Incorrect type calls involving root node (count)") +
+  xlab("Sample Size") +
+  labs(tag="B") +
+  theme_linedraw() +
+  theme(legend.position = "none") +
+  facet_wrap (~ Population, nrow=3)
+
+grid.arrange(p1,p2,nrow = 1)
+```
+
