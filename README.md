@@ -278,6 +278,8 @@ The results files generated in Steps 7 and 8 ('homoplasic_test_results.tsv' and 
     SNPPar_performance.Rmd
     SNPPar_performance.html
 
+Note: if you want to run the RMD script, make sure to change the paths to the two files where appropriate.
+
 # 10. Published Datasets
 
 ## 10.1 _Elizabethkingia anophelis_
