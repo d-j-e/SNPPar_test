@@ -2,15 +2,15 @@
  Data and scripts for testing [SNPPar](https://github.com/d-j-e/SNPPar) with either simulated or empirical datasets
 
 # Shortcut: 'Just run SNPPar...'
-  The basic command to use SNPPar is:
+The basic command to use SNPPar is:
 
-  snppar -g [reference] -t [tree] -s [snp_table] -d [output_directory]
+snppar -g [reference] -t [tree] -s [snp_table] -d [output_directory]
 
-  note: '-d' is optional, if left off SNPPar will direct the output to the current folder
+note: '-d' is optional, if left off SNPPar will direct the output to the current folder
 
-  To estimate computer usage, add the following before the above command:
+To estimate computer usage, add the following before the above command:
 
-  /usr/bin/time -lp
+/usr/bin/time -lp
 
 ## simulated dataset (see also [7. Run simulated data with SNPPar](https://github.com/d-j-e/SNPPar_test#7-run-simulated-data-with-snppar-observed-and-compare-expected-and-observed-results))
 ### reference: NC_00962_3_1.gbk (data/Step3)
@@ -38,7 +38,7 @@ These are self-contained datasets, including reference(s), tree and snp_table(s)
 
 ### Reference:
 
-Holt KE, McAdam P, Thai PVK, Thuong NTT, Ha DTM, Lan NN, Lan NH, Nhu NTQ, Hai HT, Ha VTN, Thwaites G, Edwards DJ, Nath AP, Pham K, Ascher DB, Farrar J, Khor CC, Teo YY, Inouye M, Caws M, Dunstan SJ. Frequent transmission of the *Mycobacterium tuberculosis* Beijing lineage and positive selection for the EsxW Beijing variant in Vietnam. *Nat Genet* 2018;50:849-856 doi: 10.1038/s41588-018-0117-9
+Holt KE, McAdam P, Thai PVK, Thuong NTT, Ha DTM, Lan NN, Lan NH, Nhu NTQ, Hai HT, Ha VTN, Thwaites G, Edwards DJ, Nath AP, Pham K, Ascher DB, Farrar J, Khor CC, Teo YY, Inouye M, Caws M, Dunstan SJ. Frequent transmission of the *Mycobacterium tuberculosis* Beijing lineage and positive selection for the EsxW Beijing variant in Vietnam. *Nat Genet* 2018;50:849-856 [doi:10.1038/s41588-018-0117-9](https://www.nature.com/articles/s41588-018-0117-9)
 
 ## 1.1 Three levels of data 
 
@@ -323,7 +323,7 @@ Note: if you want to run the RMD script, make sure to change the paths to the tw
 
 ### Reference:
 
-Perrin A, Larsonneur E, Nicholson AC, Edwards DJ, Gundlach KM, Whitney AM, Gulvik CA, Bell ME, Rendueles O, Cury J, Hugon P, Clermont D, Enouf V, Loparev V, Juieng P, Monson T, Warshauer D, Elbadawi LI, Spalding Walters M, Crist MB, Noble-Wang J, Borlaug G, Rocha EPC, Criscuolo A, Touchon M, Davis JP, Holt KE, McQuiston JR, Brisse S. Evolutionary dynamics and genomic features of the *Elizabethkingia anophelis* 2015 to 2016 Wisconsin outbreak strain. *Nat Commun* 2017;8:15483 doi:10.1038/ncomms15483
+Perrin A, Larsonneur E, Nicholson AC, Edwards DJ, Gundlach KM, Whitney AM, Gulvik CA, Bell ME, Rendueles O, Cury J, Hugon P, Clermont D, Enouf V, Loparev V, Juieng P, Monson T, Warshauer D, Elbadawi LI, Spalding Walters M, Crist MB, Noble-Wang J, Borlaug G, Rocha EPC, Criscuolo A, Touchon M, Davis JP, Holt KE, McQuiston JR, Brisse S. Evolutionary dynamics and genomic features of the *Elizabethkingia anophelis* 2015 to 2016 Wisconsin outbreak strain. *Nat Commun* 2017;8:15483 [doi:10.1038/ncomms15483](https://www.nature.com/articles/ncomms15483)
 
 ### Reference genome:
 
@@ -353,7 +353,7 @@ XXXX FigTree XXXXXX
 
 ### Reference:
 
-Lieberman TD, Michel JB, Aingaran M, Potter-Bynoe G, Roux D, Davis MR Jr, Skurnik D, Leiby N, LiPuma JJ, Goldberg JB, McAdam AJ, Priebe GP, Kishony R. Parallel bacterial evolution within multiple patients identifies candidate pathogenicity genes. *Nat Genet* 2011;43:1275-1280 doi: 10.1038/ng.997
+Lieberman TD, Michel JB, Aingaran M, Potter-Bynoe G, Roux D, Davis MR Jr, Skurnik D, Leiby N, LiPuma JJ, Goldberg JB, McAdam AJ, Priebe GP, Kishony R. Parallel bacterial evolution within multiple patients identifies candidate pathogenicity genes. *Nat Genet* 2011;43:1275-1280 [doi:10.1038/ng.997](https://www.nature.com/articles/ng.997)
 
 ### Reference genomes: 
 
@@ -387,7 +387,7 @@ XXXX FigTree XXXXXX
 
 ### Reference:
 
-Holt KE, McAdam P, Thai PVK, Thuong NTT, Ha DTM, Lan NN, Lan NH, Nhu NTQ, Hai HT, Ha VTN, Thwaites G, Edwards DJ, Nath AP, Pham K, Ascher DB, Farrar J, Khor CC, Teo YY, Inouye M, Caws M, Dunstan SJ. Frequent transmission of the *Mycobacterium tuberculosis* Beijing lineage and positive selection for the EsxW Beijing variant in Vietnam. *Nat Genet* 2018;50:849-856 doi: 10.1038/s41588-018-0117-9
+Holt KE, McAdam P, Thai PVK, Thuong NTT, Ha DTM, Lan NN, Lan NH, Nhu NTQ, Hai HT, Ha VTN, Thwaites G, Edwards DJ, Nath AP, Pham K, Ascher DB, Farrar J, Khor CC, Teo YY, Inouye M, Caws M, Dunstan SJ. Frequent transmission of the *Mycobacterium tuberculosis* Beijing lineage and positive selection for the EsxW Beijing variant in Vietnam. *Nat Genet* 2018;50:849-856 [doi:10.1038/s41588-018-0117-9](https://www.nature.com/articles/s41588-018-0117-9)
 
 ### Reference genome:
 
