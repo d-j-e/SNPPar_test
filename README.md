@@ -343,7 +343,11 @@ snppar -s CP014805v2_CP014805_alleles_1outgroup_69strains_var_regionFiltered_con
 
 ### Post-run analysis:
 
+XXXXXXX
+
 Final tree: elizabethkingia_node_labelled_nexus_CSID.tre
+
+XXXX FigTree XXXXXX
 
 ## 10.2 _Burkholderia dolosa_ (data/published_data/Burkholderia)
 
@@ -377,7 +381,7 @@ snppar -s NIHMS335194-supplement-2-alleles_chr3.csv -t lieberman2011natgen_ss_ro
 
 ### Post-run analysis:
 
-
+XXXX FigTree XXXXXX
 
 ## 10.3 _Mycobacterium tuberculosis_ (data/published_data/Mycobacterium)
 
@@ -415,11 +419,11 @@ The final 'all_mutation_events' and 'homoplasic_mutation_events' were then used 
 
 ### commands:
 
-python count_ME_by_genes.py 
+python count_ME_by_genes.py XXXXX
 
 and
 
-python count_ME_by_genes.py 
+python count_ME_by_genes.py XXXXXX
 
 outputs: 'allME_counts_by_gene.txt' and 'hME_counts_by_gene.txt'
 
@@ -429,3 +433,5 @@ These were then combined with list of genes with no overlap with filtered region
 
     GL124_r2000_out_analysis.Rmd
     GL124_r2000_out_analysis.html
+
+XXXX FigTree XXXXXX
