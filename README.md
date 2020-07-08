@@ -13,7 +13,7 @@ To estimate computer usage, add the following before the above command:
 /usr/bin/time -lp
 
 ## simulated dataset (see also [7. Run simulated data with SNPPar](https://github.com/d-j-e/SNPPar_test#7-run-simulated-data-with-snppar-observed-and-compare-expected-and-observed-results))
-### reference: NC_00962_3_1.gbk (data/Step3/)
+### reference: NC_00962_3_1.gbk (data/Step3)
 ### trees: In data/Step4/trees (12 sample strategies)
 ### SNP tables: In data/Step5/simulated/SNPTables (12 samples strategies X 10 replicates)
   note: SNP tables other than those in the sub-folder 'HCMC_L2_r10p' need to be unpacked before using.
@@ -22,7 +22,7 @@ To estimate computer usage, add the following before the above command:
 snppar -g NC_00962_3_1.gbk -t HCMC_L2_r10p.tre -s HCMC_L2_r10p_r1_alleles.csv -d sim_out_HCMC_L2_r10p/
 
 ## empirical dataset (see also [8. Run empirical data with SNPPar](https://github.com/d-j-e/SNPPar_test#8-run-empirical-data-with-snppar))
-### reference: NC_00962_3_1.gbk (data/Step3/)
+### reference: NC_00962_3_1.gbk (data/Step3)
 ### trees: In data/Step4/trees (12 sample strategies)
 ### SNP tables: In data/Step3/SNP_tables.zip (12 sample strategies)
   note: the SNP tables need to be unpacked before using.
@@ -411,7 +411,7 @@ Prior to further analysis, the complete mutation event list was filtered to remo
 
 snppar -M Global_L124_all_r2000_out_all_mutation_events_no_root.tsv -t Mtb_GL124_2000_out_c995_root.tre -d snppar_output/no_root_run -p run2_ -P -C -R
 
-Note that we also identified the types of homoplasies('-P', parallel, '-C' convergent and '-R' revertant options).
+Note that we also identified the types of homoplasies('-P', parallel; '-C', convergent; and '-R', revertant options).
 
 ### Post-run analysis:
 
