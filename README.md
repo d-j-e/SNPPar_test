@@ -12,24 +12,24 @@ To estimate computer usage, add the following before the above command:
 
 /usr/bin/time -lp
 
-## simulated dataset
+## simulated dataset (see also [7. Run simulated data with SNPPar](https://github.com/d-j-e/SNPPar_test#7-run-simulated-data-with-snppar-observed-and-compare-expected-and-observed-results))
 ### reference: NC_00962_3_1.gbk (data/Step3/)
-### trees: In SNP_tables.zip (data/Step4 - 12 sample strategies)
+### trees: In data/Step4/trees (12 sample strategies)
 ### SNP tables: In data/Step5/simulated/SNPTables (12 samples strategies X 10 replicates)
   note: SNP tables other than those in the sub-folder 'HCMC_L2_r10p' need to be unpacked before using.
 
 ### Example command: 
-snppar -g NC_00962_3_1.gbk -t HCMC_L2_r10p.tre -s HCMC_L2_r10p_r1_alleles.csv -d simulated_out/HCMC_L2_r10p/
+snppar -g NC_00962_3_1.gbk -t HCMC_L2_r10p.tre -s HCMC_L2_r10p_r1_alleles.csv -d sim_out_HCMC_L2_r10p/
 
-## empirical dataset
+## empirical dataset (see also [8. Run empirical data with SNPPar](https://github.com/d-j-e/SNPPar_test#8-run-empirical-data-with-snppar))
 ### reference: NC_00962_3_1.gbk (data/Step3/)
-### trees: In SNP_tables.zip (data/Step4 - 12 sample strategies)
+### trees: In data/Step4/trees (12 sample strategies)
 ### SNP tables: In data/Step3/SNP_tables.zip (12 sample strategies)
   note: the SNP tables need to be unpacked before using.
 
 ### Example command:
 
-snppar -g NC_00962_3_1.gbk -d real_out/HCMC_L2_r10p -t HCMC_L2_r10p.tre -s HCMC_L2_r10p_alleles_82strains_var_rF_c95.csv
+snppar -g NC_00962_3_1.gbk -t HCMC_L2_r10p.tre -s HCMC_L2_r10p_alleles_82strains_var_rF_c95.csv -d real_out_HCMC_L2_r10p/
 
 ## published datasets
 These are self-contained datasets, including reference(s), tree and snp_table(s) required to run SNPPar. The instructions for each are below in [10. Published Datasets](https://github.com/d-j-e/SNPPar_test#10-published-datasets).
