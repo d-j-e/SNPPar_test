@@ -25,7 +25,7 @@ To estimate computer usage, add the following before the above command:
   note: the SNP tables need to be unpacked before using.
 
 ## published datasets
-These are self-contained datasets, including reference(s), tree and snp_table(s) required to run SNPPar. The instructions for each are below in **10. Published Datasets**.
+These are self-contained datasets, including reference(s), tree and snp_table(s) required to run SNPPar. The instructions for each are below in [10. Published Datasets](https://github.com/d-j-e/SNPPar_test#10-published-datasets).
 
 # 1. Explanation of simulated data
 
