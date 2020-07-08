@@ -29,6 +29,10 @@ These are self-contained datasets, including reference(s), tree and snp_table(s)
 
 # 1. Explanation of simulated data
 
+### Reference:
+
+Holt KE, McAdam P, Thai PVK, Thuong NTT, Ha DTM, Lan NN, Lan NH, Nhu NTQ, Hai HT, Ha VTN, Thwaites G, Edwards DJ, Nath AP, Pham K, Ascher DB, Farrar J, Khor CC, Teo YY, Inouye M, Caws M, Dunstan SJ. Frequent transmission of the *Mycobacterium tuberculosis* Beijing lineage and positive selection for the EsxW Beijing variant in Vietnam. *Nat Genet* 2018;50:849-856 doi: 10.1038/s41588-018-0117-9
+
 ## 1.1 Three levels of data 
 
 * Vietnam (Ho Chi Minh City) lineage 2 - 'HCMC_L2'
@@ -308,7 +312,11 @@ Note: if you want to run the RMD script, make sure to change the paths to the tw
 
 # 10. Published Datasets
 
-## 10.1 _Elizabethkingia anophelis_
+## 10.1 _Elizabethkingia anophelis_ (data/published_data/Elizabethkingia)
+
+### Reference:
+
+Perrin A, Larsonneur E, Nicholson AC, Edwards DJ, Gundlach KM, Whitney AM, Gulvik CA, Bell ME, Rendueles O, Cury J, Hugon P, Clermont D, Enouf V, Loparev V, Juieng P, Monson T, Warshauer D, Elbadawi LI, Spalding Walters M, Crist MB, Noble-Wang J, Borlaug G, Rocha EPC, Criscuolo A, Touchon M, Davis JP, Holt KE, McQuiston JR, Brisse S. Evolutionary dynamics and genomic features of the *Elizabethkingia anophelis* 2015 to 2016 Wisconsin outbreak strain. *Nat Commun* 2017;8:15483 doi:10.1038/ncomms15483
 
 ### Reference genome:
 
@@ -330,9 +338,13 @@ snppar -s CP014805v2_CP014805_alleles_1outgroup_69strains_var_regionFiltered_con
 
 Final tree: elizabethkingia_node_labelled_nexus_CSID.tre
 
-## 10.2 _Burkholderia dolosa_
+## 10.2 _Burkholderia dolosa_ (data/published_data/Burkholderia)
 
-### Reference genomes:
+### Reference:
+
+Lieberman TD, Michel JB, Aingaran M, Potter-Bynoe G, Roux D, Davis MR Jr, Skurnik D, Leiby N, LiPuma JJ, Goldberg JB, McAdam AJ, Priebe GP, Kishony R. Parallel bacterial evolution within multiple patients identifies candidate pathogenicity genes. *Nat Genet* 2011;43:1275-1280 doi: 10.1038/ng.997
+
+### Reference genomes: 
 
     AU0158_ch1.gb
     AU0158_ch2.gb
@@ -360,7 +372,11 @@ snppar -s NIHMS335194-supplement-2-alleles_chr3.csv -t lieberman2011natgen_ss_ro
 
 
 
-## 10.3 _Mycobacterium tuberculosis_
+## 10.3 _Mycobacterium tuberculosis_ (data/published_data/Mycobacterium)
+
+### Reference:
+
+Holt KE, McAdam P, Thai PVK, Thuong NTT, Ha DTM, Lan NN, Lan NH, Nhu NTQ, Hai HT, Ha VTN, Thwaites G, Edwards DJ, Nath AP, Pham K, Ascher DB, Farrar J, Khor CC, Teo YY, Inouye M, Caws M, Dunstan SJ. Frequent transmission of the *Mycobacterium tuberculosis* Beijing lineage and positive selection for the EsxW Beijing variant in Vietnam. *Nat Genet* 2018;50:849-856 doi: 10.1038/s41588-018-0117-9
 
 ### Reference genome:
 
