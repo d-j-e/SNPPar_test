@@ -391,7 +391,9 @@ NC_00962_3_1.gbk
 
 ### SNPtable:
 
-Global_L124_r2000_out_NC_000962_alleles_2001strains_regionFiltered_cons0.995_var_hardFiltered.csv (Note: this needs decompressing before use)
+Global_L124_r2000_out_NC_000962_alleles_2001strains_regionFiltered_cons0.995_var_hardFiltered.csv 
+
+Note: this needs decompressing before use. Also, all SNPs that occur in any genes *either partially or completely* overlapping with excluded regions have also been excluded from the SNP table ('hard filter' option in 'parseSNPTable3.py')
 
 ### Tree:
 
@@ -401,14 +403,29 @@ Mtb_GL124_2000_out_c995_root.tre
 
 snppar -s Global_L124_r2000_out_NC_000962_alleles_2001strains_regionFiltered_cons0.995_var_hardFiltered.csv -g NC_00962_3_1.gbk -t Mtb_GL124_2000_out_c995_root.tre -d snppar_output -p Global_L124_all_r2000_out
 
-Filter out root node calls...
+Prior to further analysis, the complete mutation event list was filtered to remove any events that involved the root node (*via* sorting in Excel). The resulting mutation events file ('Global_L124_all_r2000_out_all_mutation_events_no_root.tsv') was then passed bck through SNPPar to obtain the homoplasic events within Lineages 1, 2 and 4.
 
 snppar -M Global_L124_all_r2000_out_all_mutation_events_no_root.tsv -t Mtb_GL124_2000_out_c995_root.tre -d snppar_output/no_root_run -p run2_ -P -C -R
 
-### Notes:
-
-
+Note that we also identified the types of homoplasies('-P', parallel, '-C' convergent and '-R' revertant options).
 
 ### Post-run analysis:
 
-### R-markdown script:
+The final 'all_mutation_events' and 'homoplasic_mutation_events' were then used to get the mutation event counts for all genes using 'count_ME_by_genes.py'.
+
+### commands:
+
+python count_ME_by_genes.py 
+
+and
+
+python count_ME_by_genes.py 
+
+outputs: 'allME_counts_by_gene.txt' and 'hME_counts_by_gene.txt'
+
+These were then combined with list of genes with no overlap with filtered regions ('zero_gene_tag_list.txt' extracted from 'Global_L124_r2000_out_NC_000962_alleles_2001strains_regionFiltered_cons0.995_var_hardFiltered.txt' *via* Excel) in analysis using [R](https://www.r-project.org/) version 3.5.1 in [RStudio](https://rstudio.com/) version 1.1.383. Both the markdown script and resulting output (in HTML format) are provided here.
+
+### R-markdown script and output:
+
+    GL124_r2000_out_analysis.Rmd
+    GL124_r2000_out_analysis.html
