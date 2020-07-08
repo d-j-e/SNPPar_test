@@ -2,15 +2,15 @@
  Data and scripts for testing [SNPPar](https://github.com/d-j-e/SNPPar) with either simulated or empirical datasets
 
 # Shortcut: 'Just run SNPPar...'
-The basic command to use SNPPar is:
+  The basic command to use SNPPar is:
 
-snppar -g [reference] -t [tree] -s [snp_table] -d [output_directory]
+  snppar -g [reference] -t [tree] -s [snp_table] -d [output_directory]
 
-note: '-d' is optional, if left off SNPPar will direct the output to the current folder
+  note: '-d' is optional, if left off SNPPar will direct the output to the current folder
 
-To estimate computer usage, add the following before the above command:
+  To estimate computer usage, add the following before the above command:
 
-/usr/bin/time -lp
+  /usr/bin/time -lp
 
 ## simulated dataset (see also [7. Run simulated data with SNPPar](https://github.com/d-j-e/SNPPar_test#7-run-simulated-data-with-snppar-observed-and-compare-expected-and-observed-results))
 ### reference: NC_00962_3_1.gbk (data/Step3)
