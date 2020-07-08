@@ -1,6 +1,32 @@
 # SNPPar_test
  Data and scripts for testing [SNPPar](https://github.com/d-j-e/SNPPar) with either simulated or empirical datasets
 
+# Shortcut: 'Just run SNPPar...'
+The basic command to use SNPPar is:
+
+snppar -g [reference] -t [tree] -s [snp_table] -d [output_directory]
+
+note: '-d' is optional, if left off SNPPar will direct the output to the current folder
+
+To estimate computer usage, add the following before the above command:
+
+/usr/bin/time -lp
+
+## simulated dataset
+### reference: NC_00962_3_1.gbk (data/Step3/)
+### trees: In SNP_tables.zip (data/Step4 - 12 sample strategies)
+### SNP tables: In data/Step5/simulated/SNPTables (12 samples strategies X 10 replicates)
+  note: SNP tables other than those in the sub-folder 'HCMC_L2_r10p' need to be unpacked before using.
+
+## empirical dataset
+### reference: NC_00962_3_1.gbk (data/Step3/)
+### trees: In SNP_tables.zip (data/Step4 - 12 sample strategies)
+### SNP tables: In data/Step3/SNP_tables.zip (12 sample strategies)
+  note: the SNP tables need to be unpacked before using.
+
+## published datasets
+These are self-contained datasets, including reference(s), tree and snp_table(s) required to run SNPPar. The instructions for each are below in **10. Published Datasets**.
+
 # 1. Explanation of simulated data
 
 ## 1.1 Three levels of data 
@@ -146,7 +172,7 @@ python processSeqGen.py -i [seqgen_output_example] -p HCMC_L2_r10p_r1
     Global_L124_r1000	43038		281296		0.153
     Global_L124_r2000	63451		398169		0.159
 
-In the subfolder 'data/Step5/simulated/HCMC_L2)r10p' is the folder with the results for run 1 to 10 of HCMC_L2_r10p (*sans* SeqGen output as discussed above). The rest of the outputs for the 11 other datasets are either zipped into a single file (e.g. 'HCMC_L2_r20p.zip' in 'Step5/simulated') or split into separate zipped files (<100 MB for GitHub, e.g. 'Global_L124_r1000_r1_to_r3.zip' in 'Step5/simulated/Global_L124_r1000').
+In the subfolder 'data/Step5/simulated/' there are two sub-folders, FASTA and SNPTables. The results for run 1 to 10 of HCMC_L2_r10p are supplied uncompressed in both sub-folders (*sans* SeqGen output as discussed above). The rest of the outputs for the 11 other datasets are either zipped into a single file (e.g. 'HCMC_L2_r20p.zip' in 'Step5/simulated/FASTA and /SNPTables') or split into separate zipped files (<100 MB for GitHub, e.g. 'Global_L124_r1000_r1_to_r3.zip' in 'Step5/simulated/FASTA'). Compressed files need be be unpacked before use.
 
 # 6. Extract expected mutation events and homoplasies
 
