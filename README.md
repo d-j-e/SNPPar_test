@@ -419,13 +419,13 @@ The final 'all_mutation_events' and 'homoplasic_mutation_events' were then used 
 
 ### commands:
 
-python countMEbyGene.py XXXXX
+python countMEbyGene.py -i Global_L124_all_r2000_out_all_mutation_events_no_root.tsv -p all
 
 and
 
-python countMEbyGene.py XXXXXX
+python countMEbyGene.py -i run2_homoplasic_events_all_calls.tsv -p h
 
-outputs: 'allME_counts_by_gene.txt' and 'hME_counts_by_gene.txt'
+outputs: 'allME_counts_by_gene.txt' and 'hME_counts_by_gene.txt' respectively
 
 These were then combined with list of genes with no overlap with filtered regions ('zero_gene_tag_list.txt' extracted from 'Global_L124_r2000_out_NC_000962_alleles_2001strains_regionFiltered_cons0.995_var_hardFiltered.txt' *via* Excel) in analysis using [R](https://www.r-project.org/) version 3.5.1 in [RStudio](https://rstudio.com/) version 1.1.383. Both the markdown script and resulting output (in HTML format) are provided here.
 
