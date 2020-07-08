@@ -415,15 +415,15 @@ Note that we also identified the types of homoplasies('-P', parallel; '-C', conv
 
 ### Post-run analysis:
 
-The final 'all_mutation_events' and 'homoplasic_mutation_events' were then used to get the mutation event counts for all genes using 'count_ME_by_genes.py'.
+The final 'all_mutation_events' and 'homoplasic_mutation_events' were then used to get the mutation event counts for all genes using 'countMEbyGene.py'.
 
 ### commands:
 
-python count_ME_by_genes.py XXXXX
+python countMEbyGene.py XXXXX
 
 and
 
-python count_ME_by_genes.py XXXXXX
+python countMEbyGene.py XXXXXX
 
 outputs: 'allME_counts_by_gene.txt' and 'hME_counts_by_gene.txt'
 
