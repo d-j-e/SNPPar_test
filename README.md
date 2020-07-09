@@ -343,11 +343,17 @@ snppar -s CP014805v2_CP014805_alleles_1outgroup_69strains_var_regionFiltered_con
 
 ### Post-run analysis:
 
-XXXXXXX
+The 'all_mutation_events.tsv' output file was then used to get the mutation event counts for all genes using 'countMEbyGene.py'.
+
+python countMEbyGene.py -i snppar_output/all_mutation_events.tsv -p Elizabethkingia_all_
+
+output: Elizabethkingia_all_ME_counts_by_gene.txt
+
+As the isolates were named by readset and not CDC identifier as per the paper, the names were converted in the NEXUS format tree using 'isolate_list.txt'.
 
 Final tree: elizabethkingia_node_labelled_nexus_CSID.tre
 
-XXXX FigTree XXXXXX
+The file 'homoplasic_mutation_events.tsv' and the final tree were then used to map information back on to the tree using [FigTree](http://tree.bio.ed.ac.uk/software/figtree/).
 
 ## 10.2 _Burkholderia dolosa_ (data/published_data/Burkholderia)
 

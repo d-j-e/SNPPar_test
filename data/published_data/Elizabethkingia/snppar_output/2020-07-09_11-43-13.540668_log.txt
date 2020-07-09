@@ -1,0 +1,82 @@
+2020-07-09_11-43-13.540668: INFO : Log started: (snppar_output/2020-07-09_11-43-13.540668_log.txt)
+2020-07-09_11:43:13.541279: INFO : SNPPar:	Parallel SNP Finder V1.0
+	(utilising TreeTime for ASR and intermediate sorting)
+2020-07-09_11:43:13.542313: INFO : User command: snppar -s /Users/david/Documents/GitHub/SNPPar_test/data/published_data/Elizabethkingia/CP014805v2_CP014805_alleles_1outgroup_69strains_var_regionFiltered_cons0.95_var.csv -g /Users/david/Documents/GitHub/SNPPar_test/data/published_data/Elizabethkingia/CP014805v2.gbk -t /Users/david/Documents/GitHub/SNPPar_test/data/published_data/Elizabethkingia/final_raxml_tree_no_recomb.tree -d snppar_output
+2020-07-09_11:43:13.542690: INFO : Reading SNP table from /Users/david/Documents/GitHub/SNPPar_test/data/published_data/Elizabethkingia/CP014805v2_CP014805_alleles_1outgroup_69strains_var_regionFiltered_cons0.95_var.csv
+2020-07-09_11:43:13.555518: INFO : Finished reading 374 SNPs in total
+...keeping 374 variable SNPs and ignoring 0 SNPs
+that are non-variable among the 70 isolates
+2020-07-09_11:43:13.555830: INFO : Reading Genbank file from /Users/david/Documents/GitHub/SNPPar_test/data/published_data/Elizabethkingia/CP014805v2.gbk
+2020-07-09_11:43:14.255531: WARNING : Split gene found in Genbank reference
+This gene will not be included in the results: join{[0:3059](-), [3930528:3931222](-)}
+2020-07-09_11:43:14.277269: INFO : Found 3494 genes
+2020-07-09_11:43:14.277633: INFO : Reading tree from /Users/david/Documents/GitHub/SNPPar_test/data/published_data/Elizabethkingia/final_raxml_tree_no_recomb.tree...
+2020-07-09_11:43:14.282907: INFO : Tree and SNP table have same isolates
+2020-07-09_11:43:14.283224: INFO : Parsing SNPs to find bi-, tri- and quadallelic SNPs...
+Also testing if biallelic SNPs are homoplasic
+2020-07-09_11:43:14.468174: INFO : Biallelic SNPs (>1 one isolate): 106
+Biallelic SNPs (>1 one isolate, no missing calls): 80
+Biallelic SNP patterns tested (no missing calls): 26
+Paraphyletic SNPs found: 0
+Triallelic SNPs found: 7
+Quadallelic SNPs found: 0
+
+Total SNPs for mapping: 33
+2020-07-09_11:43:14.468568: INFO : Assigning monophyletic SNPs to genes
+2020-07-09_11:43:14.471515: INFO : Of the 341 monophyletic SNPs for testing, 34 are intergenic, and 307 are intragenic
+2020-07-09_11:43:14.472800: INFO : Assigning SNPs to map to genes
+2020-07-09_11:43:14.473205: INFO : Of the 33 SNPs to map for testing, 2 are intergenic, and 31 are intragenic
+2020-07-09_11:43:14.474297: INFO : Running TreeTime: treetime ancestral --aln snppar_output/snps_to_map.mfasta --tree /Users/david/Documents/GitHub/SNPPar_test/data/published_data/Elizabethkingia/final_raxml_tree_no_recomb.tree --outdir snppar_output/treetime_out/ --report-ambiguous --verbose 2
+2020-07-09_11:43:17.431234: INFO : stdout: 
+0.00	-TreeAnc: set-up
+
+Inferred sequence evolution model (saved as snppar_output/treetime_out//sequence_evolution_model.txt):
+Substitution rate (mu): 1.0
+
+Equilibrium frequencies (pi_i):
+  A: 0.2296
+  C: 0.262
+  G: 0.2785
+  T: 0.2186
+  -: 0.0113
+
+Symmetrized rates from j->i (W_ij):
+	A	C	G	T	-
+  A	0	2.1555	1.1982	0.907	0.8361
+  C	2.1555	0	0.7738	1.128	0.8244
+  G	1.1982	0.7738	0	1.9356	0.8252
+  T	0.907	1.128	1.9356	0	0.8395
+  -	0.8361	0.8244	0.8252	0.8395	0
+
+Actual rates from j->i (Q_ij):
+	A	C	G	T	-
+  A	0	0.4949	0.2751	0.2083	0.192
+  C	0.5648	0	0.2028	0.2956	0.216
+  G	0.3337	0.2155	0	0.539	0.2298
+  T	0.1983	0.2466	0.4232	0	0.1835
+  -	0.0094	0.0093	0.0093	0.0095	0
+
+
+--- alignment including ancestral nodes saved as  
+	 snppar_output/treetime_out/ancestral_sequences.fasta
+
+--- tree saved in nexus format as  
+	 snppar_output/treetime_out/annotated_tree.nexus
+
+2020-07-09_11:43:17.431878: INFO : Extracting mutation events from ASR results...
+2020-07-09_11:43:17.438278: INFO : Extracting internal node sequences from ASR results...
+2020-07-09_11:43:17.439962: INFO : Processing mapped mutation events...
+2020-07-09_11:43:17.440423: INFO : Processing monophyletic mutation events...
+2020-07-09_11:43:17.540252: INFO : Combining monophyletic and mapped mutation events
+Also combining monophyletic and mapped node sequences...
+2020-07-09_11:43:17.542104: INFO : Writing node sequences to snppar_output/node_sequences.fasta
+2020-07-09_11:43:17.549689: INFO : Assigning coding consequenses to the mutation events...
+2020-07-09_11:43:17.573415: INFO : 316 non-synonymous changes, 30 synonymous changes, and 36 SNP events in non-coding regions
+2020-07-09_11:43:17.573795: INFO : Parsing all mutation events...
+2020-07-09_11:43:17.575492: INFO : Found 2 mutation events that are homoplasic
+2020-07-09_11:43:17.575837: INFO : Writing all calls at homoplasic event positions to snppar_output/homoplasic_events_all_calls.tsv
+2020-07-09_11:43:17.577670: INFO : Writing all mutation events to snppar_output/all_mutation_events.tsv
+2020-07-09_11:43:17.585618: INFO : Mapping mutation events to NEXUS tree: snppar_output/node_labelled_nexus.tre
+2020-07-09_11:43:17.589228: INFO : Also mapping mutation events to Newick NHX tree: snppar_output/node_labelled_newick.tre
+2020-07-09_11:43:17.592212: INFO : Cleaning up intermediate files...
+2020-07-09_11:43:17.610877: INFO : ...Finished

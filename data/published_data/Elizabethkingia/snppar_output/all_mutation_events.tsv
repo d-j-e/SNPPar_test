@@ -1,10 +1,10 @@
 Position	Type	Ancestor_Node	Derived_Node	Ancestor_Call	Derived_Call	Gene	Strand	Codon	Codon_Position	Ancestor_Codon	Derived_Codon	Ancestor_A.A.	Derived_A.A.	Change	Up_Gene	Up_Gene_Strand	Up_Gene_Distance	Down_Gene	Down_Gene_Strand	Down_Gene_Distance
 2265	intergenic	N3	SRR3313005	A	G	-	-	-	-	-	-	-	-	-	A2T74_17820	-1	3694	A2T74_00010	-1	1070
-5657	intragenic	N2	N3	A	C	A2T74_00015	-1	240	1	TAT	GAT	Y	D	NS	-	-	-	-	-	-
+5657	intragenic	N2	N4	C	A	A2T74_00015	-1	240	1	GAT	TAT	D	Y	NS	-	-	-	-	-	-
 17730	intergenic	N13	SRR3465866	C	A	-	-	-	-	-	-	-	-	-	A2T74_00050	1	267	A2T74_00055	-1	489
 25706	intragenic	N3	SRR3313005	A	G	A2T74_00085	1	232	1	AAA	GAA	K	E	NS	-	-	-	-	-	-
+32639	intragenic	N1	DRR015707	C	T	A2T74_00110	-1	354	1	GAT	AAT	D	N	NS	-	-	-	-	-	-
 32639	intragenic	N37	SRR3465869	C	A	A2T74_00110	-1	354	1	GAT	TAT	D	Y	NS	-	-	-	-	-	-
-32639	intragenic	N1	N2	T	C	A2T74_00110	-1	354	1	AAT	GAT	N	D	NS	-	-	-	-	-	-
 34527	intragenic	N36	SRR3240411	C	A	A2T74_00115	-1	35	2	AGA	ATA	R	I	NS	-	-	-	-	-	-
 40639	intragenic	N26	SRR3465877	G	T	A2T74_00145	-1	359	1	CTT	ATT	L	I	NS	-	-	-	-	-	-
 60837	intragenic	N4	SRR3313003	C	A	A2T74_00240	-1	58	3	CAG	CAT	Q	H	NS	-	-	-	-	-	-
@@ -36,7 +36,7 @@ Position	Type	Ancestor_Node	Derived_Node	Ancestor_Call	Derived_Call	Gene	Strand	
 325376	intragenic	N48	SRR3465895	G	T	A2T74_01480	1	312	1	GCA	TCA	A	S	NS	-	-	-	-	-	-
 327869	intragenic	N52	N53	C	A	A2T74_01480	1	1143	1	CCG	ACG	P	T	NS	-	-	-	-	-	-
 337748	intragenic	N40	SRR3312997	G	T	A2T74_01520	1	255	2	GGA	GTA	G	V	NS	-	-	-	-	-	-
-345344	intragenic	N2	N3	T	G	A2T74_01540	1	38	1	TAT	GAT	Y	D	NS	-	-	-	-	-	-
+345344	intragenic	N2	N4	G	T	A2T74_01540	1	38	1	GAT	TAT	D	Y	NS	-	-	-	-	-	-
 347825	intragenic	N3	SRR3313005	G	A	A2T74_01545	1	149	1	GTA	ATA	V	I	NS	-	-	-	-	-	-
 352098	intragenic	N36	SRR3240411	C	A	A2T74_01560	-1	174	1	GAA	TAA	E	*	NS	-	-	-	-	-	-
 352668	intergenic	N3	SRR3313005	C	T	-	-	-	-	-	-	-	-	-	A2T74_01560	-1	51	A2T74_01565	-1	49
@@ -99,8 +99,8 @@ Position	Type	Ancestor_Node	Derived_Node	Ancestor_Call	Derived_Call	Gene	Strand	
 908246	intragenic	N3	SRR3313005	C	A	A2T74_04105	1	208	1	CTT	ATT	L	I	NS	-	-	-	-	-	-
 922988	intragenic	N7	N8	C	A	A2T74_04165	-1	180	2	AGA	ATA	R	I	NS	-	-	-	-	-	-
 923979	intragenic	N3	SRR3313005	G	A	A2T74_04170	1	43	1	GAC	AAC	D	N	NS	-	-	-	-	-	-
+933859	intragenic	N1	DRR015707	C	T	A2T74_04215	1	29	2	ACT	ATT	T	I	NS	-	-	-	-	-	-
 933859	intragenic	N4	N5	C	A	A2T74_04215	1	29	2	ACT	AAT	T	N	NS	-	-	-	-	-	-
-933859	intragenic	N1	N2	T	C	A2T74_04215	1	29	2	ATT	ACT	I	T	NS	-	-	-	-	-	-
 935409	intergenic	N46	SRR3312992	G	T	-	-	-	-	-	-	-	-	-	A2T74_04215	1	154	A2T74_04220	1	159
 935634	intragenic	N3	SRR3313005	G	A	A2T74_04220	1	23	1	GGG	AGG	G	R	NS	-	-	-	-	-	-
 953882	intragenic	N3	SRR3313005	C	T	A2T74_04315	1	407	1	CCA	TCA	P	S	NS	-	-	-	-	-	-
@@ -128,8 +128,8 @@ Position	Type	Ancestor_Node	Derived_Node	Ancestor_Call	Derived_Call	Gene	Strand	
 1151479	intragenic	N45	N46	G	A	A2T74_05250	1	844	1	GGA	AGA	G	R	NS	-	-	-	-	-	-
 1157902	intragenic	N20	SRR3312990	C	A	A2T74_05285	-1	718	1	GAA	TAA	E	*	NS	-	-	-	-	-	-
 1158541	intragenic	N48	SRR3465863	C	A	A2T74_05285	-1	505	1	GAA	TAA	E	*	NS	-	-	-	-	-	-
+1168190	intragenic	N1	DRR015707	C	T	A2T74_05320	1	239	3	TTC	TTT	F	F	S	-	-	-	-	-	-
 1168190	intragenic	N37	SRR3465869	C	A	A2T74_05320	1	239	3	TTC	TTA	F	L	NS	-	-	-	-	-	-
-1168190	intragenic	N1	N2	T	C	A2T74_05320	1	239	3	TTT	TTC	F	F	S	-	-	-	-	-	-
 1169793	intragenic	N24	N25	G	T	A2T74_05325	1	89	3	AAG	AAT	K	N	NS	-	-	-	-	-	-
 1171715	intragenic	N20	SRR3312990	G	T	A2T74_05335	1	322	2	AGA	ATA	R	I	NS	-	-	-	-	-	-
 1172807	intragenic	N5	SRR3240412	G	A	A2T74_05335	1	686	2	GGT	GAT	G	D	NS	-	-	-	-	-	-
@@ -215,10 +215,10 @@ Position	Type	Ancestor_Node	Derived_Node	Ancestor_Call	Derived_Call	Gene	Strand	
 2113179	intragenic	N4	N5	C	A	A2T74_09570	-1	125	1	GAA	TAA	E	*	NS	-	-	-	-	-	-
 2128282	intragenic	N16	N18	G	T	A2T74_09640	-1	90	1	CCT	ACT	P	T	NS	-	-	-	-	-	-
 2133319	intragenic	N12	SRR3240401	C	A	A2T74_09675	-1	415	3	ACG	ACT	T	T	S	-	-	-	-	-	-
-2145104	intragenic	N2	N3	T	G	A2T74_09735	-1	155	1	ACA	CCA	T	P	NS	-	-	-	-	-	-
+2145104	intragenic	N2	N4	G	T	A2T74_09735	-1	155	1	CCA	ACA	P	T	NS	-	-	-	-	-	-
 2151257	intergenic	N25	SRR3465878	G	T	-	-	-	-	-	-	-	-	-	A2T74_09765	-1	125	A2T74_09770	-1	16
+2164126	intragenic	N1	DRR015707	C	T	A2T74_09820	-1	486	3	CAG	CAA	Q	Q	S	-	-	-	-	-	-
 2164126	intragenic	N4	SRR3313003	C	A	A2T74_09820	-1	486	3	CAG	CAT	Q	H	NS	-	-	-	-	-	-
-2164126	intragenic	N1	N2	T	C	A2T74_09820	-1	486	3	CAA	CAG	Q	Q	S	-	-	-	-	-	-
 2164889	intragenic	N3	SRR3313005	C	T	A2T74_09820	-1	232	2	GGG	GAG	G	E	NS	-	-	-	-	-	-
 2168955	intragenic	N7	N8	C	A	A2T74_09840	-1	704	1	GTT	TTT	V	F	NS	-	-	-	-	-	-
 2169660	intragenic	N14	SRR3313000	C	A	A2T74_09840	-1	469	1	GAA	TAA	E	*	NS	-	-	-	-	-	-
