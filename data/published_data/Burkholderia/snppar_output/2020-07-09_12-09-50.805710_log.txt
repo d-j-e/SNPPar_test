@@ -1,0 +1,80 @@
+2020-07-09_12-09-50.805710: INFO : Log started: (snppar_output/2020-07-09_12-09-50.805710_log.txt)
+2020-07-09_12:09:50.806213: INFO : SNPPar:	Parallel SNP Finder V1.0
+	(utilising TreeTime for ASR and intermediate sorting)
+2020-07-09_12:09:50.807286: INFO : User command: snppar -s /Users/david/Documents/GitHub/SNPPar_test/data/published_data/Burkholderia/NIHMS335194-supplement-2-alleles_chr1.csv -g /Users/david/Documents/GitHub/SNPPar_test/data/published_data/Burkholderia/AU0158_ch1.gb -t /Users/david/Documents/GitHub/SNPPar_test/data/published_data/Burkholderia/lieberman2011natgen_ss_root.newick -d snppar_output -p chr1_
+2020-07-09_12:09:50.807619: INFO : Reading SNP table from /Users/david/Documents/GitHub/SNPPar_test/data/published_data/Burkholderia/NIHMS335194-supplement-2-alleles_chr1.csv
+2020-07-09_12:09:50.821802: INFO : Finished reading 299 SNPs in total
+...keeping 299 variable SNPs and ignoring 0 SNPs
+that are non-variable among the 114 isolates
+2020-07-09_12:09:50.822137: INFO : Reading Genbank file from /Users/david/Documents/GitHub/SNPPar_test/data/published_data/Burkholderia/AU0158_ch1.gb
+2020-07-09_12:09:51.317363: INFO : Found 2688 genes
+2020-07-09_12:09:51.317755: INFO : Reading tree from /Users/david/Documents/GitHub/SNPPar_test/data/published_data/Burkholderia/lieberman2011natgen_ss_root.newick...
+2020-07-09_12:09:51.323916: INFO : Tree and SNP table have same isolates
+2020-07-09_12:09:51.324198: INFO : Parsing SNPs to find bi-, tri- and quadallelic SNPs...
+Also testing if biallelic SNPs are homoplasic
+2020-07-09_12:09:51.791447: INFO : Biallelic SNPs (>1 one isolate): 95
+Biallelic SNPs (>1 one isolate, no missing calls): 75
+Biallelic SNP patterns tested (no missing calls): 40
+Paraphyletic SNPs found: 2
+Triallelic SNPs found: 7
+Quadallelic SNPs found: 1
+
+Total SNPs for mapping: 30
+2020-07-09_12:09:51.791900: INFO : Assigning monophyletic SNPs to genes
+2020-07-09_12:09:51.794258: INFO : Of the 269 monophyletic SNPs for testing, 71 are intergenic, and 198 are intragenic
+2020-07-09_12:09:51.795342: INFO : Assigning SNPs to map to genes
+2020-07-09_12:09:51.795778: INFO : Of the 30 SNPs to map for testing, 5 are intergenic, and 25 are intragenic
+2020-07-09_12:09:51.799448: INFO : Running TreeTime: treetime ancestral --aln snppar_output/chr1_snps_to_map.mfasta --tree /Users/david/Documents/GitHub/SNPPar_test/data/published_data/Burkholderia/lieberman2011natgen_ss_root.newick --outdir snppar_output/treetime_out/ --report-ambiguous --verbose 2
+2020-07-09_12:09:54.819012: INFO : stdout: 
+0.00	-TreeAnc: set-up
+
+Inferred sequence evolution model (saved as snppar_output/treetime_out//sequence_evolution_model.txt):
+Substitution rate (mu): 1.0
+
+Equilibrium frequencies (pi_i):
+  A: 0.1973
+  C: 0.2647
+  G: 0.2907
+  T: 0.236
+  -: 0.0113
+
+Symmetrized rates from j->i (W_ij):
+	A	C	G	T	-
+  A	0	1.5895	1.2716	0.6361	0.6368
+  C	1.5895	0	1.7778	1.3344	0.6365
+  G	1.2716	1.7778	0	1.2708	0.6366
+  T	0.6361	1.3344	1.2708	0	0.6367
+  -	0.6368	0.6365	0.6366	0.6367	0
+
+Actual rates from j->i (Q_ij):
+	A	C	G	T	-
+  A	0	0.3136	0.2509	0.1255	0.1257
+  C	0.4207	0	0.4706	0.3532	0.1685
+  G	0.3696	0.5167	0	0.3694	0.185
+  T	0.1501	0.3149	0.2999	0	0.1502
+  -	0.0072	0.0072	0.0072	0.0072	0
+
+
+--- alignment including ancestral nodes saved as  
+	 snppar_output/treetime_out/ancestral_sequences.fasta
+
+--- tree saved in nexus format as  
+	 snppar_output/treetime_out/annotated_tree.nexus
+
+2020-07-09_12:09:54.819539: INFO : Extracting mutation events from ASR results...
+2020-07-09_12:09:54.838473: INFO : Extracting internal node sequences from ASR results...
+2020-07-09_12:09:54.841213: INFO : Processing mapped mutation events...
+2020-07-09_12:09:54.841743: INFO : Processing monophyletic mutation events...
+2020-07-09_12:09:54.958707: INFO : Combining monophyletic and mapped mutation events
+Also combining monophyletic and mapped node sequences...
+2020-07-09_12:09:54.960520: INFO : Writing node sequences to snppar_output/chr1_node_sequences.fasta
+2020-07-09_12:09:54.968831: INFO : Assigning coding consequenses to the mutation events...
+2020-07-09_12:09:54.984257: INFO : 199 non-synonymous changes, 57 synonymous changes, and 77 SNP events in non-coding regions
+2020-07-09_12:09:54.984655: INFO : Parsing all mutation events...
+2020-07-09_12:09:54.988099: INFO : Found 32 mutation events that are homoplasic
+2020-07-09_12:09:54.988384: INFO : Writing all calls at homoplasic event positions to snppar_output/chr1_homoplasic_events_all_calls.tsv
+2020-07-09_12:09:54.993187: INFO : Writing all mutation events to snppar_output/chr1_all_mutation_events.tsv
+2020-07-09_12:09:55.006461: INFO : Mapping mutation events to NEXUS tree: snppar_output/chr1_node_labelled_nexus.tre
+2020-07-09_12:09:55.012861: INFO : Also mapping mutation events to Newick NHX tree: snppar_output/chr1_node_labelled_newick.tre
+2020-07-09_12:09:55.019303: INFO : Cleaning up intermediate files...
+2020-07-09_12:09:55.032798: INFO : ...Fertig

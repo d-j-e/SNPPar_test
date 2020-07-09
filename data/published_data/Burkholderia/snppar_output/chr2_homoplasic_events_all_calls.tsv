@@ -10,8 +10,8 @@ Position	Type	Ancestor_Node	Derived_Node	Ancestor_Call	Derived_Call	Gene	Strand	
 819544	intergenic	N1	X-3-7	T	G	-	-	-	-	-	-	-	-	-	BDAG_03385	1	135	BDAG_03386	1	239
 819544	intergenic	N77	N78	T	G	-	-	-	-	-	-	-	-	-	BDAG_03385	1	135	BDAG_03386	1	239
 1231197	intragenic	N69	L-13-4a-$	G	T	BDAG_03694	-1	172	1	CGC	AGC	R	S	NS	-	-	-	-	-	-
-1231197	intragenic	N78	L-16-0	G	C	BDAG_03694	-1	172	1	CGC	GGC	R	G	NS	-	-	-	-	-	-
-1231197	intragenic	N78	L-13-7	G	T	BDAG_03694	-1	172	1	CGC	AGC	R	S	NS	-	-	-	-	-	-
+1231197	intragenic	N78	L-16-0	T	C	BDAG_03694	-1	172	1	AGC	GGC	S	G	NS	-	-	-	-	-	-
+1231197	intragenic	N77	N78	G	T	BDAG_03694	-1	172	1	CGC	AGC	R	S	NS	-	-	-	-	-	-
 1231197	intragenic	N80	N81	G	T	BDAG_03694	-1	172	1	CGC	AGC	R	S	NS	-	-	-	-	-	-
 1231197	intragenic	N102	H-11-3	G	C	BDAG_03694	-1	172	1	CGC	GGC	R	G	NS	-	-	-	-	-	-
 1231197	intragenic	N105	N106	G	T	BDAG_03694	-1	172	1	CGC	AGC	R	S	NS	-	-	-	-	-	-

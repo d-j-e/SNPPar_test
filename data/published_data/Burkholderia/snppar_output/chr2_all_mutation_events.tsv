@@ -89,7 +89,7 @@ Position	Type	Ancestor_Node	Derived_Node	Ancestor_Call	Derived_Call	Gene	Strand	
 1079771	intragenic	N49	K-12-0a	T	C	BDAG_03589	1	68	3	CTT	CTC	L	L	S	-	-	-	-	-	-
 1084436	intragenic	N8	N12	G	T	BDAG_03595	-1	347	3	CGC	CGA	R	R	S	-	-	-	-	-	-
 1118231	intragenic	N104	H-12-11a-$	G	A	BDAG_03620	1	79	1	GAG	AAG	E	K	NS	-	-	-	-	-	-
-1172708	intragenic	N9	N10	G	A	BDAG_03647	-1	685	2	GCG	GTG	A	V	NS	-	-	-	-	-	-
+1172708	intragenic	N8	N9	G	A	BDAG_03647	-1	685	2	GCG	GTG	A	V	NS	-	-	-	-	-	-
 1173119	intragenic	N3	N8	A	G	BDAG_03647	-1	548	2	CTG	CCG	L	P	NS	-	-	-	-	-	-
 1179509	intergenic	N76	N77	G	A	-	-	-	-	-	-	-	-	-	BDAG_03651	1	12	BDAG_03652	-1	119
 1207162	intergenic	N109	J-13-6a-$	T	G	-	-	-	-	-	-	-	-	-	BDAG_03669	1	448	BDAG_03670	1	126
@@ -98,8 +98,8 @@ Position	Type	Ancestor_Node	Derived_Node	Ancestor_Call	Derived_Call	Gene	Strand	
 1230971	intragenic	N40	N41	T	C	BDAG_03694	-1	247	2	GAC	GGC	D	G	NS	-	-	-	-	-	-
 1231188	intragenic	N103	N104	T	G	BDAG_03694	-1	175	1	ACC	CCC	T	P	NS	-	-	-	-	-	-
 1231197	intragenic	N69	L-13-4a-$	G	T	BDAG_03694	-1	172	1	CGC	AGC	R	S	NS	-	-	-	-	-	-
-1231197	intragenic	N78	L-16-0	G	C	BDAG_03694	-1	172	1	CGC	GGC	R	G	NS	-	-	-	-	-	-
-1231197	intragenic	N78	L-13-7	G	T	BDAG_03694	-1	172	1	CGC	AGC	R	S	NS	-	-	-	-	-	-
+1231197	intragenic	N78	L-16-0	T	C	BDAG_03694	-1	172	1	AGC	GGC	S	G	NS	-	-	-	-	-	-
+1231197	intragenic	N77	N78	G	T	BDAG_03694	-1	172	1	CGC	AGC	R	S	NS	-	-	-	-	-	-
 1231197	intragenic	N80	N81	G	T	BDAG_03694	-1	172	1	CGC	AGC	R	S	NS	-	-	-	-	-	-
 1231197	intragenic	N102	H-11-3	G	C	BDAG_03694	-1	172	1	CGC	GGC	R	G	NS	-	-	-	-	-	-
 1231197	intragenic	N105	N106	G	T	BDAG_03694	-1	172	1	CGC	AGC	R	S	NS	-	-	-	-	-	-

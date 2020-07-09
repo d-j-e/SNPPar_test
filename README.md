@@ -387,7 +387,19 @@ snppar -s NIHMS335194-supplement-2-alleles_chr3.csv -t lieberman2011natgen_ss_ro
 
 ### Post-run analysis:
 
-XXXX FigTree XXXXXX
+The three 'all_mutation_events.tsv' output file were then used to get the mutation event counts for all genes using 'countMEbyGene.py'.
+
+python countMEbyGene.py -i snppar_output/chr1_all_mutation_events.tsv -p chr1_all_
+
+python countMEbyGene.py -i snppar_output/chr2_all_mutation_events.tsv -p chr2_all_
+
+python countMEbyGene.py -i snppar_output/chr3_all_mutation_events.tsv -p chr3_all_
+
+outputs: (chr1_/chr2_/chr3_)all_ME_counts_by_gene.txt
+
+These were then combined to get the 'all_ME_counts_by_gene.txt' which has been sorted by number of mutation events per gene.
+
+The three 'homoplasic_mutation_events' files were then used to map information back on to the 'chr1_node_labelled_nexus.tre' tree using [FigTree](http://tree.bio.ed.ac.uk/software/figtree/).
 
 ## 10.3 _Mycobacterium tuberculosis_ (data/published_data/Mycobacterium)
 

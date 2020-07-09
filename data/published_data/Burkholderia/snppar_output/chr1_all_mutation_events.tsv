@@ -70,7 +70,7 @@ Position	Type	Ancestor_Node	Derived_Node	Ancestor_Call	Derived_Call	Gene	Strand	
 1229821	intragenic	N61	H-12-10	C	A	BDAG_00993	-1	391	1	GAG	TAG	E	*	NS	-	-	-	-	-	-
 1230319	intragenic	N34	C-12-1	G	A	BDAG_00993	-1	225	1	CAG	TAG	Q	*	NS	-	-	-	-	-	-
 1232268	intragenic	N109	N110	T	C	BDAG_00994	1	437	1	TTC	CTC	F	L	NS	-	-	-	-	-	-
-1238187	intergenic	N9	N10	C	T	-	-	-	-	-	-	-	-	-	BDAG_00996	-1	64	BDAG_00998	1	1658
+1238187	intergenic	N8	N9	C	T	-	-	-	-	-	-	-	-	-	BDAG_00996	-1	64	BDAG_00998	1	1658
 1251530	intragenic	N17	N18	C	A	BDAG_01005	-1	165	3	TGG	TGT	W	C	NS	-	-	-	-	-	-
 1253542	intragenic	N79	L-11-3	C	T	BDAG_01007	-1	103	3	CCG	CCA	P	P	S	-	-	-	-	-	-
 1255592	intragenic	N72	L-12-7	G	T	BDAG_01008	1	545	3	ACG	ACT	T	T	S	-	-	-	-	-	-
@@ -127,14 +127,14 @@ Position	Type	Ancestor_Node	Derived_Node	Ancestor_Call	Derived_Call	Gene	Strand	
 1618642	intragenic	N16	N17	C	T	BDAG_01314	1	265	2	GCG	GTG	A	V	NS	-	-	-	-	-	-
 1627909	intragenic	N1	X-3-7	G	A	BDAG_01323	-1	88	3	GCC	GCT	A	A	S	-	-	-	-	-	-
 1640404	intragenic	N62	H-10-6a	C	T	BDAG_01336	1	103	3	TTC	TTT	F	F	S	-	-	-	-	-	-
-1654755	intragenic	N105	N106	C	G	BDAG_01348	1	786	2	CCG	CGG	P	R	NS	-	-	-	-	-	-
+1654755	intragenic	N99	N105	C	G	BDAG_01348	1	786	2	CCG	CGG	P	R	NS	-	-	-	-	-	-
 1706080	intragenic	N56	N60	G	T	BDAG_01387	1	97	2	GGC	GTC	G	V	NS	-	-	-	-	-	-
 1708050	intragenic	N12	N13	C	T	BDAG_01388	1	40	1	CAG	TAG	Q	*	NS	-	-	-	-	-	-
 1729828	intergenic	N20	N21	C	T	-	-	-	-	-	-	-	-	-	BDAG_01406	1	144	BDAG_01407	1	65
 1730038	intragenic	N112	J-13-6b	T	C	BDAG_01407	1	49	2	CTC	CCC	L	P	NS	-	-	-	-	-	-
 1738243	intragenic	N39	E-12-1	C	G	BDAG_01415	-1	221	1	GAT	CAT	D	H	NS	-	-	-	-	-	-
 1739871	intragenic	N77	N78	C	G	BDAG_01416	1	268	3	ATC	ATG	I	M	NS	-	-	-	-	-	-
-1761290	intragenic	N10	N11	C	A	BDAG_01437	1	317	1	CTC	ATC	L	I	NS	-	-	-	-	-	-
+1761290	intragenic	N8	N9	C	A	BDAG_01437	1	317	1	CTC	ATC	L	I	NS	-	-	-	-	-	-
 1785127	intragenic	N100	H-12-7	C	T	BDAG_01456	-1	77	3	GCG	GCA	A	A	S	-	-	-	-	-	-
 1803675	intragenic	N31	B-9-1	A	G	BDAG_01475	1	169	1	AAC	GAC	N	D	NS	-	-	-	-	-	-
 1803777	intragenic	N17	N18	C	T	BDAG_01475	1	203	1	CGT	TGT	R	C	NS	-	-	-	-	-	-
