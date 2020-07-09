@@ -452,4 +452,4 @@ These were then combined with list of genes with no overlap with filtered region
     GL124_r2000_out_analysis.Rmd
     GL124_r2000_out_analysis.html
 
-The file 'homoplasic_mutation_events.tsv' and the final tree were then used to map information about _katG_ back on to the tree using [FigTree](http://tree.bio.ed.ac.uk/software/figtree/).
+The file 'Global_L124_all_r2000_out_homoplasic_events_all_calls.tsv' and the tree 'Global_L124_all_r2000_out_node_labelled_nexus.tre' were then used to map information about the _katG_ gene back on to the tree using [FigTree](http://tree.bio.ed.ac.uk/software/figtree/).
