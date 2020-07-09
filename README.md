@@ -126,7 +126,7 @@ raxml -T 16 -s HCMC_L2_r10p_alleles_82strains_var_rF_c95.mfasta -n HCMC_L2_r10p_
 
 Information from each run was collected from the resulting 'RAxML_info' file (e.g. 'set4/RAxML_info.HCMC_L2_r10p_t01.out') and collated in 'set4/RAxML_runs.tsv'. Information collected include the final maximum likelihood Optimization Likelihood (OL), the alpha distribution of GAMMA estimated from the data set along with the individual mutation rates between base pairs (e.g. A<->T) relative to the rate of G<->T, and the base frequencies. The latter three were used as estimates for modelling of sequence evolution in SeqGen (see below), whilst the first value was used to pick the 'best' tree from the five replicates (i.e. ML estimate closest to zero). A edited version of 'data/RAxML_runs.tsv' with only the statistics for the 'best' Tree was also produced ('step4/best_RAxML_runs.tsv').
 
-In each case, the tree used was the 'RAxML_bipartitions' version. The 'best' RAxML tree for each data set was opened in [FigTree](http://tree.bio.ed.ac.uk/software/figtree/), where each was midpoint rooted and nodes set to 'descending' order. Each tree was then exported in Newick format. The folder 'data/Step4/trees' contains a reformatted 'best' tree for each of the twelve data sets (eg. 'Step4/trees/HCMC_L2_r10p.tre').
+In each case, the tree used was the 'RAxML_bipartitions' version. The 'best' RAxML tree for each data set was opened in [FigTree](http://tree.bio.ed.ac.uk/software/figtree/) using version 1.4.4, where each was midpoint rooted and nodes set to 'descending' order. Each tree was then exported in Newick format. The folder 'data/Step4/trees' contains a reformatted 'best' tree for each of the twelve data sets (eg. 'Step4/trees/HCMC_L2_r10p.tre').
 
 # 5. Run SeqGen
 
@@ -353,7 +353,7 @@ As the isolates were named by readset and not CDC identifier as per the paper, t
 
 Final tree: elizabethkingia_node_labelled_nexus_CSID.tre
 
-The file 'homoplasic_mutation_events.tsv' and the final tree were then used to map information back on to the tree using [FigTree](http://tree.bio.ed.ac.uk/software/figtree/).
+The file 'homoplasic_mutation_events.tsv' and the final tree were then used to map information back on to the tree using [FigTree](http://tree.bio.ed.ac.uk/software/figtree/) using version 1.4.4.
 
 ## 10.2 _Burkholderia dolosa_ (data/published_data/Burkholderia)
 
@@ -399,7 +399,7 @@ outputs: (chr1_/chr2_/chr3_)all_ME_counts_by_gene.txt
 
 These were then combined to get the 'all_ME_counts_by_gene.txt' which has been sorted by number of mutation events per gene.
 
-The three 'homoplasic_mutation_events' files were then used to map information back on to the 'chr1_node_labelled_nexus.tre' tree using [FigTree](http://tree.bio.ed.ac.uk/software/figtree/).
+The three 'homoplasic_mutation_events' files were then used to map information back on to the 'chr1_node_labelled_nexus.tre' tree using [FigTree](http://tree.bio.ed.ac.uk/software/figtree/) using version 1.4.4.
 
 ## 10.3 _Mycobacterium tuberculosis_ (data/published_data/Mycobacterium)
 
@@ -452,4 +452,4 @@ These were then combined with list of genes with no overlap with filtered region
     GL124_r2000_out_analysis.Rmd
     GL124_r2000_out_analysis.html
 
-The file 'Global_L124_all_r2000_out_homoplasic_events_all_calls.tsv' and the tree 'Global_L124_all_r2000_out_node_labelled_nexus.tre' were then used to map information about the _katG_ gene back on to the tree using [FigTree](http://tree.bio.ed.ac.uk/software/figtree/).
+The file 'Global_L124_all_r2000_out_homoplasic_events_all_calls.tsv' and the tree 'Global_L124_all_r2000_out_node_labelled_nexus.tre' were then used to map information about the _katG_ gene back on to the tree using [FigTree](http://tree.bio.ed.ac.uk/software/figtree/) using version 1.4.4.
