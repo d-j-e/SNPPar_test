@@ -1002,8 +1002,12 @@ if __name__ == "__main__":
 					e = open(options.regions, "r")
 					for line in e:
 						fields = line.rstrip().split(delim)
-						region_start = min(int(fields[start]),int(fields[stop]))
-						region_stop = max(int(fields[start]),int(fields[stop]))
+						try:
+							region_start = min(int(fields[start]),int(fields[stop]))
+							region_stop = max(int(fields[start]),int(fields[stop]))
+						except:
+							region_start = min(int(fields[start][1:]),int(fields[stop]))
+							region_stop = max(int(fields[start][1:]),int(fields[stop]))
 						if region_start == int(fields[stop]):
 							region_start += 1
 							region_stop += 1
